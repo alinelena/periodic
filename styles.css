@@ -10,11 +10,20 @@ body {
   background-color: #f8f9fa;
 }
 
-/* Make Quarto full-width container use maximum horizontal space */
-.page-columns,
+/* Make Quarto full-width container use maximum horizontal space with zero overflow */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
 .quarto-container,
-main.content {
+.page-columns,
+main.content,
+#quarto-content {
+  width: 100% !important;
   max-width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 #quarto-content > * {
@@ -25,27 +34,42 @@ main.content {
   background: #ffffff;
 }
 
-/* Scroll wrapper for the 18-column periodic table */
+.pt-sample-wrapper {
+  max-width: 100%;
+}
+
+/* Scroll wrapper: uses container queries so child element cells scale with width */
 .pt-scroll-wrapper {
   width: 100%;
+  max-width: 100%;
   overflow-x: auto;
-  padding-bottom: 0.5rem;
+  overflow-y: hidden;
+  padding-bottom: 0.35rem;
+  container-type: inline-size;
+  container-name: ptgrid;
 }
 
 /* 19 columns: Col 1 = Period header, Cols 2..19 = Groups 1..18 */
+/* Default: fits 100% of the screen width with no horizontal scrollbar */
 .pt-grid {
   display: grid;
-  grid-template-columns: 36px repeat(18, minmax(84px, 1fr));
-  grid-template-rows: 34px repeat(7, auto) 14px repeat(2, auto);
-  gap: 5px;
-  min-width: 1580px;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  grid-template-columns: minmax(18px, 1.8fr) repeat(18, minmax(0, 5.45fr));
+  grid-template-rows: auto repeat(7, 1fr) clamp(4px, 0.8cqw, 14px) repeat(2, 1fr);
+  gap: clamp(1px, 0.28cqw, 4px);
   align-items: stretch;
 }
 
-/* Compact mode allows tighter grid */
+/* Scrollable mode (when user explicitly clicks "Scroll" in toolbar) */
+.pt-grid.pt-scroll-mode {
+  min-width: 1540px;
+}
+
+/* Compact mode allows tighter vertical footprint */
 .pt-grid.pt-compact-mode {
-  grid-template-columns: 32px repeat(18, minmax(60px, 1fr));
-  min-width: 1140px;
+  grid-template-columns: minmax(16px, 1.6fr) repeat(18, minmax(0, 5.46fr));
 }
 
 /* Axis corner & Group / Period headers */
@@ -54,7 +78,7 @@ main.content {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 0.62rem;
+  font-size: clamp(0.42rem, 0.6cqw, 0.65rem);
   font-weight: 700;
   color: #6c757d;
   line-height: 1.1;
@@ -67,13 +91,13 @@ main.content {
   border: 1px solid transparent;
   background: #e9ecef;
   color: #343a40;
-  border-radius: 6px;
-  font-size: 0.78rem;
+  border-radius: clamp(2px, 0.35cqw, 6px);
+  font-size: clamp(0.5rem, 0.76cqw, 0.82rem);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3px;
-  padding: 2px 4px;
+  gap: 2px;
+  padding: 1px 2px;
   transition: all 0.15s ease;
 }
 
@@ -88,28 +112,28 @@ main.content {
 }
 
 .pt-group-roman {
-  font-size: 0.68rem;
-  opacity: 0.8;
+  font-size: clamp(0.42rem, 0.65cqw, 0.7rem);
+  opacity: 0.85;
 }
 
 .pt-period-hdr {
-  font-size: 0.95rem;
+  font-size: clamp(0.55rem, 0.88cqw, 0.95rem);
   font-weight: 700;
 }
 
 .pt-fblock-hdr {
   justify-content: flex-end;
-  padding-right: 12px;
-  font-size: 0.82rem;
+  padding-right: clamp(4px, 0.8cqw, 12px);
+  font-size: clamp(0.5rem, 0.78cqw, 0.84rem);
 }
 
 /* Element Card matching periodic-table.typ */
 .pt-cell {
-  border: 2.2px solid var(--cat-stroke, #00739e);
+  border: clamp(1px, 0.15cqw, 2.2px) solid var(--cat-stroke, #00739e);
   background-color: var(--cat-fill, #eaf3f9);
   color: var(--pt-text-dark);
-  border-radius: var(--pt-card-radius);
-  padding: 4px 5px;
+  border-radius: clamp(3px, 0.45cqw, 8px);
+  padding: clamp(1px, 0.3cqw, 4px) clamp(1px, 0.28cqw, 4px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -117,8 +141,9 @@ main.content {
   cursor: pointer;
   user-select: none;
   transition: transform 0.14s ease, box-shadow 0.14s ease, opacity 0.18s ease, filter 0.18s ease;
-  line-height: 1.15;
-  min-height: 96px;
+  line-height: 1.1;
+  min-height: clamp(38px, 5.8cqw, 94px);
+  aspect-ratio: 1 / 1.05;
 }
 
 .pt-cell:hover,
@@ -144,9 +169,10 @@ main.content {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  gap: 2px;
-  font-size: 0.64rem;
+  gap: 1px;
+  font-size: clamp(0.35rem, 0.52cqw, 0.64rem);
   width: 100%;
+  line-height: 1.05;
 }
 
 .pt-z {
@@ -155,22 +181,23 @@ main.content {
   align-items: center;
   gap: 1px;
   white-space: nowrap;
+  font-size: clamp(0.42rem, 0.62cqw, 0.72rem);
 }
 
 .pt-phase-icon,
 .pt-marker-icon {
-  font-size: 0.62rem;
+  font-size: clamp(0.38rem, 0.55cqw, 0.65rem);
   line-height: 1;
 }
 
 .pt-ox {
-  font-size: 0.58rem;
+  font-size: clamp(0.32rem, 0.48cqw, 0.58rem);
   text-align: right;
   letter-spacing: -0.02em;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  max-width: 66%;
+  max-width: 58%;
 }
 
 .pt-mass,
@@ -178,11 +205,14 @@ main.content {
 .pt-rad,
 .pt-aff {
   font-weight: 600;
-  font-size: 0.62rem;
+  font-size: clamp(0.34rem, 0.5cqw, 0.62rem);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .pt-sym {
-  font-size: 1.25rem;
+  font-size: clamp(0.72rem, 1.35cqw, 1.35rem);
   font-weight: 800;
   text-align: center;
   line-height: 1.05;
@@ -190,16 +220,17 @@ main.content {
 }
 
 .pt-name {
-  font-size: 0.66rem;
+  font-size: clamp(0.4rem, 0.6cqw, 0.72rem);
   font-weight: 700;
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  line-height: 1.05;
 }
 
 .pt-conf {
-  font-size: 0.58rem;
+  font-size: clamp(0.32rem, 0.48cqw, 0.58rem);
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
@@ -213,13 +244,13 @@ main.content {
 
 .pt-heatmap-val {
   display: none;
-  font-size: 0.62rem;
+  font-size: clamp(0.36rem, 0.5cqw, 0.62rem);
   font-weight: 700;
   text-align: center;
   background: rgba(255, 255, 255, 0.75);
-  border-radius: 4px;
-  margin-top: 2px;
-  padding: 0 3px;
+  border-radius: 3px;
+  margin-top: 1px;
+  padding: 0 2px;
 }
 
 .pt-grid[data-color-mode="atomic_radius_angstrom"] .pt-heatmap-val,
@@ -232,8 +263,8 @@ main.content {
 
 /* Compact mode hides secondary rows for a clean compact view */
 .pt-grid.pt-compact-mode .pt-cell {
-  min-height: 62px;
-  padding: 3px 4px;
+  min-height: clamp(32px, 4.2cqw, 62px);
+  padding: 2px 3px;
 }
 
 .pt-grid.pt-compact-mode .pt-ox,
@@ -241,6 +272,41 @@ main.content {
 .pt-grid.pt-compact-mode .pt-row-mid2,
 .pt-grid.pt-compact-mode .pt-conf {
   display: none;
+}
+
+/* Responsive container queries to keep cell contents sharp and legible on any screen width */
+@container ptgrid (max-width: 1220px) {
+  .pt-row-mid2 {
+    display: none; /* Hide atomic radius and affinity row when width is compact */
+  }
+}
+
+@container ptgrid (max-width: 960px) {
+  .pt-ox,
+  .pt-conf {
+    display: none; /* Hide electron configuration and oxidation states on narrower screens */
+  }
+}
+
+@container ptgrid (max-width: 760px) {
+  .pt-row-mid1 {
+    display: none; /* Hide 1st IE & mass row on tablet/mobile screens */
+  }
+  .pt-name {
+    font-size: clamp(0.36rem, 1.3cqw, 0.55rem);
+  }
+  .pt-cell {
+    min-height: clamp(32px, 6cqw, 46px);
+  }
+}
+
+@container ptgrid (max-width: 520px) {
+  .pt-name {
+    display: none; /* On narrow mobile, show atomic number + phase and symbol */
+  }
+  .pt-group-roman {
+    display: none;
+  }
 }
 
 /* Dimmed / Matched filter states */

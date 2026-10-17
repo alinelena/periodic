@@ -425,6 +425,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Width Mode Toggle (Fit Screen vs Scrollable)
+  document.querySelectorAll('input[name="pt-width-mode"]').forEach((radio) => {
+    radio.addEventListener("change", (e) => {
+      gridEl.classList.toggle("pt-scroll-mode", e.target.value === "scroll");
+    });
+  });
+
   // Color Mode & Heatmap Logic
   const BLOCK_COLORS = {
     s: { stroke: "#98070c", fill: "#faede6" },

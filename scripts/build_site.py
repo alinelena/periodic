@@ -277,15 +277,15 @@ def main() -> None:
   <td><span class="badge pt-sym-badge" style="background:{cat_info['fill']}; color:#231f20; border:1.5px solid {cat_info['stroke']}">{html.escape(sym)}</span></td>
   <td class="fw-semibold">{html.escape(name)}</td>
   <td><span class="badge" style="background:{cat_info['fill']}; color:#231f20; border:1px solid {cat_info['stroke']}">{html.escape(e['category_label'])}</span></td>
-  <td>{e['period']}</td>
-  <td>{html.escape(str(e['group'] or 'f-block'))}</td>
-  <td><span style="color:{ph_info['color']}">{ph_info['symbol']}</span> {html.escape(ph_info['label'])}</td>
+  <td class="d-none d-lg-table-cell">{e['period']}</td>
+  <td class="d-none d-lg-table-cell">{html.escape(str(e['group'] or 'f-block'))}</td>
+  <td class="d-none d-md-table-cell"><span style="color:{ph_info['color']}">{ph_info['symbol']}</span> {html.escape(ph_info['label'])}</td>
   <td>{html.escape(str(e['atomic_mass']))}</td>
-  <td>{ox_html}</td>
-  <td>{html.escape(str(e['ionization_energy']))}</td>
-  <td>{html.escape(str(e['atomic_radius']))}</td>
-  <td>{html.escape(str(e['electron_affinity']))}</td>
-  <td>{e['electron_configuration_html']}</td>
+  <td class="d-none d-md-table-cell">{ox_html}</td>
+  <td class="d-none d-md-table-cell">{html.escape(str(e['ionization_energy']))}</td>
+  <td class="d-none d-lg-table-cell">{html.escape(str(e['atomic_radius']))}</td>
+  <td class="d-none d-lg-table-cell">{html.escape(str(e['electron_affinity']))}</td>
+  <td class="d-none d-xl-table-cell">{e['electron_configuration_html']}</td>
   <td class="text-nowrap" onclick="event.stopPropagation();">
     <a href="elements/{html.escape(sym)}.yaml" class="btn btn-xs btn-outline-primary py-0 px-2" target="_blank" title="View {html.escape(sym)}.yaml">YAML</a>
     <a href="{html.escape(e['rsc_url'])}" class="btn btn-xs btn-outline-secondary py-0 px-2" target="_blank" rel="noopener" title="RSC Page">RSC ↗</a>
@@ -308,7 +308,7 @@ def main() -> None:
     tc_cat = categories_meta["categories"]["TransMetal"]
 
     app_html = f"""<!-- Generated from elements/*.yaml by scripts/build_site.py -->
-<div class="pt-app-container container-fluid px-2 px-lg-4 py-2">
+<div class="pt-app-container container-fluid px-1 px-sm-2 px-md-3 py-2">
 
   <!-- Top Controls & Interactive Legend Banner -->
   <div class="card shadow-sm border-0 mb-3 pt-top-panel">
@@ -420,7 +420,7 @@ def main() -> None:
           </div>
         </div>
 
-        <!-- Color Mode / Heatmap, Density & Background Theme Controls -->
+        <!-- Color Mode / Heatmap, Density, Width & Background Theme Controls -->
         <div class="col-12 col-sm-6 col-lg-auto d-flex flex-wrap align-items-center gap-2">
           <div class="input-group input-group-sm" style="width: auto;">
             <label class="input-group-text bg-body-tertiary" for="pt-color-mode">Color by</label>
@@ -440,6 +440,13 @@ def main() -> None:
             <label class="btn btn-outline-secondary" for="pt-density-detailed">Detailed</label>
             <input type="radio" class="btn-check" name="pt-density" id="pt-density-compact" value="compact">
             <label class="btn btn-outline-secondary" for="pt-density-compact">Compact</label>
+          </div>
+
+          <div class="btn-group btn-group-sm" role="group" aria-label="Width fit">
+            <input type="radio" class="btn-check" name="pt-width-mode" id="pt-width-fit" value="fit" checked>
+            <label class="btn btn-outline-secondary" for="pt-width-fit" title="Fit table to screen width">Fit Screen</label>
+            <input type="radio" class="btn-check" name="pt-width-mode" id="pt-width-scroll" value="scroll">
+            <label class="btn btn-outline-secondary" for="pt-width-scroll" title="Allow horizontal scroll">Scroll</label>
           </div>
 
           <div class="btn-group btn-group-sm" role="group" aria-label="Background theme">
@@ -563,15 +570,15 @@ def main() -> None:
                   <th data-sort="symbol" role="button">Sym ↕</th>
                   <th data-sort="name" role="button">Name ↕</th>
                   <th data-sort="category_label" role="button">Category ↕</th>
-                  <th data-sort="period" role="button">Period ↕</th>
-                  <th data-sort="group" role="button">Group ↕</th>
-                  <th data-sort="phase" role="button">Phase @ 273K ↕</th>
+                  <th data-sort="period" class="d-none d-lg-table-cell" role="button">Period ↕</th>
+                  <th data-sort="group" class="d-none d-lg-table-cell" role="button">Group ↕</th>
+                  <th data-sort="phase" class="d-none d-md-table-cell" role="button">Phase @ 273K ↕</th>
                   <th data-sort="atomic_mass_value" role="button">Mass [Da] ↕</th>
-                  <th>Oxidation States</th>
-                  <th data-sort="ionization_energy_ev" role="button">1st IE [eV] ↕</th>
-                  <th data-sort="atomic_radius_angstrom" role="button">Radius [Å] ↕</th>
-                  <th data-sort="electron_affinity_ev" role="button">Affinity [eV] ↕</th>
-                  <th>Configuration</th>
+                  <th class="d-none d-md-table-cell">Oxidation States</th>
+                  <th data-sort="ionization_energy_ev" class="d-none d-md-table-cell" role="button">1st IE [eV] ↕</th>
+                  <th data-sort="atomic_radius_angstrom" class="d-none d-lg-table-cell" role="button">Radius [Å] ↕</th>
+                  <th data-sort="electron_affinity_ev" class="d-none d-lg-table-cell" role="button">Affinity [eV] ↕</th>
+                  <th class="d-none d-xl-table-cell">Configuration</th>
                   <th>Files &amp; Links</th>
                 </tr>
               </thead>

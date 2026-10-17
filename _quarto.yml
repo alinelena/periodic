@@ -77,13 +77,14 @@ website:
         href: elements/categories.yaml
         target: _blank
     right:
-      - text: "RSC Periodic Table"
-        href: https://www.rsc.org/periodic-table
-        target: _blank
       - icon: github
         href: https://github.com/alinelena/periodic
         target: _blank
         aria-label: GitHub Repository
+  page-footer:
+    left: "More info: [RSC Periodic Table](https://www.rsc.org/periodic-table){target=_blank}"
+    center: "Source & raw data: [GitHub](https://github.com/alinelena/periodic){target=_blank} & [GitLab](https://gitlab.com/drFaustroll/periodic){target=_blank}"
+    right: "[YAML Schema](elements/categories.yaml){target=_blank}"
 
 format:
   html:

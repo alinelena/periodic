@@ -518,7 +518,7 @@ def main() -> None:
           </div>
           <div class="d-flex flex-wrap justify-content-between align-items-center mt-2 pt-2 border-top text-muted small">
             <div>
-              More info: <a href="https://www.rsc.org/periodic-table" target="_blank" rel="noopener">https://www.rsc.org/periodic-table</a>
+              More info: <a href="https://www.rsc.org/periodic-table" target="_blank" rel="noopener">RSC Periodic Table</a>
               &nbsp;|&nbsp;
               Source &amp; raw YAML data: <a href="https://github.com/alinelena/periodic" target="_blank" rel="noopener">github.com/alinelena/periodic</a>
               &amp; <a href="https://gitlab.com/drFaustroll/periodic" target="_blank" rel="noopener">gitlab.com/drFaustroll/periodic</a>

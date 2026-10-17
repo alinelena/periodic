@@ -7,9 +7,7 @@ project:
     - index.qmd
   resources:
     - elements/*.yaml
-    - periodic-table.pdf
-    - periodic-table-a4.pdf
-    - periodic-table.svg
+    - downloads/*
     - assets/periodic.js
 
 website:
@@ -21,15 +19,60 @@ website:
     left:
       - text: "Interactive Table"
         href: index.qmd
-      - text: "PDF (Poster)"
-        href: periodic-table.pdf
-        target: _blank
-      - text: "PDF (A4)"
-        href: periodic-table-a4.pdf
-        target: _blank
-      - text: "SVG"
-        href: periodic-table.svg
-        target: _blank
+      - text: "☀️ Downloads (Light)"
+        menu:
+          - text: "A0 Landscape (Light PDF)"
+            href: downloads/periodic-table-a0-light.pdf
+            target: _blank
+          - text: "A1 Landscape (Light PDF)"
+            href: downloads/periodic-table-a1-light.pdf
+            target: _blank
+          - text: "A2 Landscape (Light PDF)"
+            href: downloads/periodic-table-a2-light.pdf
+            target: _blank
+          - text: "A3 Landscape (Light PDF)"
+            href: downloads/periodic-table-a3-light.pdf
+            target: _blank
+          - text: "A4 Landscape (Light PDF)"
+            href: downloads/periodic-table-a4-light.pdf
+            target: _blank
+          - text: "A5 Landscape (Light PDF)"
+            href: downloads/periodic-table-a5-light.pdf
+            target: _blank
+          - text: "---"
+          - text: "Auto-Size Poster (Light PDF)"
+            href: downloads/periodic-table-auto-light.pdf
+            target: _blank
+          - text: "Vector Graphic (Light SVG)"
+            href: downloads/periodic-table-light.svg
+            target: _blank
+      - text: "🌙 Downloads (Dark)"
+        menu:
+          - text: "A0 Landscape (Dark PDF)"
+            href: downloads/periodic-table-a0-dark.pdf
+            target: _blank
+          - text: "A1 Landscape (Dark PDF)"
+            href: downloads/periodic-table-a1-dark.pdf
+            target: _blank
+          - text: "A2 Landscape (Dark PDF)"
+            href: downloads/periodic-table-a2-dark.pdf
+            target: _blank
+          - text: "A3 Landscape (Dark PDF)"
+            href: downloads/periodic-table-a3-dark.pdf
+            target: _blank
+          - text: "A4 Landscape (Dark PDF)"
+            href: downloads/periodic-table-a4-dark.pdf
+            target: _blank
+          - text: "A5 Landscape (Dark PDF)"
+            href: downloads/periodic-table-a5-dark.pdf
+            target: _blank
+          - text: "---"
+          - text: "Auto-Size Poster (Dark PDF)"
+            href: downloads/periodic-table-auto-dark.pdf
+            target: _blank
+          - text: "Vector Graphic (Dark SVG)"
+            href: downloads/periodic-table-dark.svg
+            target: _blank
       - text: "YAML Schema"
         href: elements/categories.yaml
         target: _blank

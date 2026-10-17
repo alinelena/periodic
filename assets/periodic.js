@@ -55,6 +55,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const cat = DATA.categories[el.category];
     sampleCard.style.setProperty("--cat-stroke", cat.stroke);
     sampleCard.style.setProperty("--cat-fill", cat.fill);
+    sampleCard.style.setProperty("--cat-stroke-dark", cat.stroke_dark);
+    sampleCard.style.setProperty("--cat-fill-dark", cat.fill_dark);
     sampleCard.dataset.symbol = el.symbol;
 
     const phaseObj = DATA.phases[el.phase] || DATA.phases.unknown;
@@ -414,6 +416,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Background Theme Toggle (Light vs Dark)
+  document.querySelectorAll('input[name="pt-bg-theme"]').forEach((radio) => {
+    radio.addEventListener("change", (e) => {
+      const isDark = e.target.value === "dark";
+      document.body.classList.toggle("pt-dark-theme", isDark);
+      document.documentElement.setAttribute("data-bs-theme", isDark ? "dark" : "light");
+    });
+  });
+
   // Color Mode & Heatmap Logic
   const BLOCK_COLORS = {
     s: { stroke: "#98070c", fill: "#faede6" },
@@ -558,6 +569,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (origTile && previewEl) {
       previewEl.style.setProperty("--cat-stroke", cat.stroke);
       previewEl.style.setProperty("--cat-fill", cat.fill);
+      previewEl.style.setProperty("--cat-stroke-dark", cat.stroke_dark);
+      previewEl.style.setProperty("--cat-fill-dark", cat.fill_dark);
       previewEl.innerHTML = origTile.innerHTML;
     }
 

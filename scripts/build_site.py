@@ -77,7 +77,7 @@ def render_element_tile(elem: dict, categories_meta: dict) -> str:
 
     return f"""<div class="pt-cell pt-elem"
   id="elem-{sym}"
-  style="grid-row: {row}; grid-column: {col}; --cat-stroke: {cat_info['stroke']}; --cat-fill: {cat_info['fill']};"
+  style="grid-row: {row}; grid-column: {col}; --cat-stroke: {cat_info['stroke']}; --cat-fill: {cat_info['fill']}; --cat-stroke-dark: {cat_info['stroke_dark']}; --cat-fill-dark: {cat_info['fill_dark']};"
   data-z="{z}"
   data-symbol="{html.escape(sym)}"
   data-name="{html.escape(name)}"
@@ -128,16 +128,6 @@ def main() -> None:
 
     elements.sort(key=lambda e: e["atomic_number"])
     assert len(elements) == 118, f"Expected 118 elements, found {len(elements)}"
-
-    # Generate Group Header cells (row 0 -> CSS grid-row 1 if we shift rows by +1)
-    # Wait: let's use explicit CSS grid coordinates:
-    # Column 1 = Period labels (1..7)
-    # Columns 2..19 = Groups 1..18 (so grid_col + 1)
-    # Row 1 = Group labels (1 IA .. 18 VIIIA)
-    # Rows 2..8 = Periods 1..7 (so grid_row + 1)
-    # Row 9 = Spacer row
-    # Row 10 = Lanthanides (57 La .. 71 Lu at cols 5..19, i.e., grid_col + 1)
-    # Row 11 = Actinides (89 Ac .. 103 Lr at cols 5..19, i.e., grid_col + 1)
 
     grid_items = []
 
@@ -191,7 +181,7 @@ def main() -> None:
     act_cat = categories_meta["categories"]["Actinide"]
     grid_items.append(
         f"""<div class="pt-cell pt-placeholder"
-  style="grid-row: 7; grid-column: 4; --cat-stroke: {lan_cat['stroke']}; --cat-fill: {lan_cat['fill']};"
+  style="grid-row: 7; grid-column: 4; --cat-stroke: {lan_cat['stroke']}; --cat-fill: {lan_cat['fill']}; --cat-stroke-dark: {lan_cat['stroke_dark']}; --cat-fill-dark: {lan_cat['fill_dark']};"
   data-category="Lanthanide"
   data-category-filter="Lanthanide"
   role="button"
@@ -204,7 +194,7 @@ def main() -> None:
     )
     grid_items.append(
         f"""<div class="pt-cell pt-placeholder"
-  style="grid-row: 8; grid-column: 4; --cat-stroke: {act_cat['stroke']}; --cat-fill: {act_cat['fill']};"
+  style="grid-row: 8; grid-column: 4; --cat-stroke: {act_cat['stroke']}; --cat-fill: {act_cat['fill']}; --cat-stroke-dark: {act_cat['stroke_dark']}; --cat-fill-dark: {act_cat['fill_dark']};"
   data-category="Actinide"
   data-category-filter="Actinide"
   role="button"
@@ -233,7 +223,7 @@ def main() -> None:
         count = sum(1 for e in elements if e["category"] == cat_id)
         cat_buttons.append(
             f'<button type="button" class="pt-cat-box" data-category-filter="{cat_id}" '
-            f'style="--cat-stroke: {cat_info["stroke"]}; --cat-fill: {cat_info["fill"]};">'
+            f'style="--cat-stroke: {cat_info["stroke"]}; --cat-fill: {cat_info["fill"]}; --cat-stroke-dark: {cat_info["stroke_dark"]}; --cat-fill-dark: {cat_info["fill_dark"]};">'
             f'<span class="pt-cat-label">{html.escape(cat_info["label"])}</span>'
             f'<span class="pt-cat-count badge rounded-pill">{count}</span>'
             f"</button>"
@@ -336,7 +326,7 @@ def main() -> None:
             </div>
 
             <div id="pt-sample-card" class="pt-cell pt-sample-elem"
-                 style="--cat-stroke: {tc_cat['stroke']}; --cat-fill: {tc_cat['fill']};"
+                 style="--cat-stroke: {tc_cat['stroke']}; --cat-fill: {tc_cat['fill']}; --cat-stroke-dark: {tc_cat['stroke_dark']}; --cat-fill-dark: {tc_cat['fill_dark']};"
                  data-symbol="Tc" role="button" title="Click to inspect element details">
               <div class="pt-row pt-row-top">
                 <span class="pt-z" id="sample-z"><strong>43</strong><span class="pt-phase-icon" style="color:#9e5e06">⬛</span><span class="pt-marker-icon" style="color:#00ae61">⚗</span><span class="pt-marker-icon" style="color:#f58a91">☢</span></span>
@@ -396,7 +386,7 @@ def main() -> None:
   </div>
 
   <!-- Search, View Tabs & Heatmap Toolbar -->
-  <div class="card shadow-sm border-0 mb-3">
+  <div class="card shadow-sm border-0 mb-3 pt-toolbar-card">
     <div class="card-body py-2 px-3">
       <div class="row g-2 align-items-center justify-content-between">
 
@@ -422,19 +412,19 @@ def main() -> None:
         </div>
 
         <!-- Search Input -->
-        <div class="col-12 col-sm-6 col-lg-4">
+        <div class="col-12 col-sm-6 col-lg-3">
           <div class="input-group input-group-sm">
             <span class="input-group-text bg-body-tertiary">🔍</span>
-            <input type="search" id="pt-search-input" class="form-control" placeholder="Search symbol, name, Z, config, oxidation (press /)..." aria-label="Search elements">
+            <input type="search" id="pt-search-input" class="form-control" placeholder="Search symbol, name, Z, config (press /)..." aria-label="Search elements">
             <span class="input-group-text bg-body-tertiary text-muted" id="pt-match-count">118 / 118</span>
           </div>
         </div>
 
-        <!-- Color Mode / Heatmap & Density Controls -->
+        <!-- Color Mode / Heatmap, Density & Background Theme Controls -->
         <div class="col-12 col-sm-6 col-lg-auto d-flex flex-wrap align-items-center gap-2">
           <div class="input-group input-group-sm" style="width: auto;">
             <label class="input-group-text bg-body-tertiary" for="pt-color-mode">Color by</label>
-            <select class="form-select form-select-sm" id="pt-color-mode" style="max-width: 210px;">
+            <select class="form-select form-select-sm" id="pt-color-mode" style="max-width: 205px;">
               <option value="category" selected>Category (Typst Default)</option>
               <option value="phase">Phase @ 273 K</option>
               <option value="block">Electronic Block (s, p, d, f)</option>
@@ -450,6 +440,13 @@ def main() -> None:
             <label class="btn btn-outline-secondary" for="pt-density-detailed">Detailed</label>
             <input type="radio" class="btn-check" name="pt-density" id="pt-density-compact" value="compact">
             <label class="btn btn-outline-secondary" for="pt-density-compact">Compact</label>
+          </div>
+
+          <div class="btn-group btn-group-sm" role="group" aria-label="Background theme">
+            <input type="radio" class="btn-check" name="pt-bg-theme" id="pt-bg-light" value="light" checked>
+            <label class="btn btn-outline-secondary" for="pt-bg-light" title="Light background">☀️ Light</label>
+            <input type="radio" class="btn-check" name="pt-bg-theme" id="pt-bg-dark" value="dark">
+            <label class="btn btn-outline-secondary" for="pt-bg-dark" title="Dark background">🌙 Dark</label>
           </div>
         </div>
 
@@ -481,19 +478,48 @@ def main() -> None:
         </div>
       </div>
 
-      <!-- Footer matching periodic-table.typ -->
-      <div class="d-flex flex-wrap justify-content-between align-items-center mt-3 px-2 py-2 border-top text-muted small">
-        <div>
-          More info: <a href="https://www.rsc.org/periodic-table" target="_blank" rel="noopener">https://www.rsc.org/periodic-table</a>
-          &nbsp;|&nbsp;
-          Source &amp; raw YAML data: <a href="https://github.com/alinelena/periodic" target="_blank" rel="noopener">github.com/alinelena/periodic</a>
-          &amp; <a href="https://gitlab.com/drFaustroll/periodic" target="_blank" rel="noopener">gitlab.com/drFaustroll/periodic</a>
-        </div>
-        <div class="d-flex gap-2 mt-2 mt-sm-0">
-          <a href="periodic-table.pdf" class="btn btn-xs btn-outline-secondary" target="_blank">⬇ PDF Poster</a>
-          <a href="periodic-table-a4.pdf" class="btn btn-xs btn-outline-secondary" target="_blank">⬇ PDF (A4)</a>
-          <a href="periodic-table.svg" class="btn btn-xs btn-outline-secondary" target="_blank">⬇ SVG Vector</a>
-          <a href="elements/categories.yaml" class="btn btn-xs btn-outline-secondary" target="_blank">⬇ categories.yaml</a>
+      <!-- Downloads & Footer matching periodic-table.typ -->
+      <div class="card shadow-sm border-0 mt-3 pt-footer-card">
+        <div class="card-body py-2 px-3">
+          <div class="row g-2 align-items-center justify-content-between">
+            <div class="col-12 col-xl-auto">
+              <div class="d-flex flex-wrap align-items-center gap-1">
+                <span class="fw-semibold small me-1">☀️ Light Background PDF/SVG:</span>
+                <a href="downloads/periodic-table-a0-light.pdf" class="btn btn-xs btn-outline-secondary" target="_blank">A0</a>
+                <a href="downloads/periodic-table-a1-light.pdf" class="btn btn-xs btn-outline-secondary" target="_blank">A1</a>
+                <a href="downloads/periodic-table-a2-light.pdf" class="btn btn-xs btn-outline-secondary" target="_blank">A2</a>
+                <a href="downloads/periodic-table-a3-light.pdf" class="btn btn-xs btn-outline-secondary" target="_blank">A3</a>
+                <a href="downloads/periodic-table-a4-light.pdf" class="btn btn-xs btn-outline-secondary" target="_blank">A4</a>
+                <a href="downloads/periodic-table-a5-light.pdf" class="btn btn-xs btn-outline-secondary" target="_blank">A5</a>
+                <a href="downloads/periodic-table-auto-light.pdf" class="btn btn-xs btn-outline-secondary" target="_blank">Auto PDF</a>
+                <a href="downloads/periodic-table-light.svg" class="btn btn-xs btn-outline-secondary" target="_blank">SVG</a>
+              </div>
+            </div>
+            <div class="col-12 col-xl-auto">
+              <div class="d-flex flex-wrap align-items-center gap-1">
+                <span class="fw-semibold small me-1">🌙 Dark Background PDF/SVG:</span>
+                <a href="downloads/periodic-table-a0-dark.pdf" class="btn btn-xs btn-outline-dark pt-dark-dl-btn" target="_blank">A0</a>
+                <a href="downloads/periodic-table-a1-dark.pdf" class="btn btn-xs btn-outline-dark pt-dark-dl-btn" target="_blank">A1</a>
+                <a href="downloads/periodic-table-a2-dark.pdf" class="btn btn-xs btn-outline-dark pt-dark-dl-btn" target="_blank">A2</a>
+                <a href="downloads/periodic-table-a3-dark.pdf" class="btn btn-xs btn-outline-dark pt-dark-dl-btn" target="_blank">A3</a>
+                <a href="downloads/periodic-table-a4-dark.pdf" class="btn btn-xs btn-outline-dark pt-dark-dl-btn" target="_blank">A4</a>
+                <a href="downloads/periodic-table-a5-dark.pdf" class="btn btn-xs btn-outline-dark pt-dark-dl-btn" target="_blank">A5</a>
+                <a href="downloads/periodic-table-auto-dark.pdf" class="btn btn-xs btn-outline-dark pt-dark-dl-btn" target="_blank">Auto PDF</a>
+                <a href="downloads/periodic-table-dark.svg" class="btn btn-xs btn-outline-dark pt-dark-dl-btn" target="_blank">SVG</a>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex flex-wrap justify-content-between align-items-center mt-2 pt-2 border-top text-muted small">
+            <div>
+              More info: <a href="https://www.rsc.org/periodic-table" target="_blank" rel="noopener">https://www.rsc.org/periodic-table</a>
+              &nbsp;|&nbsp;
+              Source &amp; raw YAML data: <a href="https://github.com/alinelena/periodic" target="_blank" rel="noopener">github.com/alinelena/periodic</a>
+              &amp; <a href="https://gitlab.com/drFaustroll/periodic" target="_blank" rel="noopener">gitlab.com/drFaustroll/periodic</a>
+            </div>
+            <div>
+              <a href="elements/categories.yaml" class="btn btn-xs btn-outline-secondary" target="_blank">⬇ categories.yaml</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>

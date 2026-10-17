@@ -1,5 +1,6 @@
 _site/
 _includes/
+downloads/
 .quarto/
 __pycache__/
 *.pyc
@@ -9,3 +10,6 @@ periodic-table-a4.pdf
 periodic-table.svg
 periodic.pdf
 periodic.typ
+
+/.quarto/
+**/*.quarto_ipynb

@@ -3,14 +3,8 @@
 #import "@preview/cetz:0.4.2"
 
 #let paper-size = sys.inputs.at("paper", default: none)
-#set page(
-  ..(if paper-size != none and paper-size != "auto" {
-    (paper: lower(paper-size), flipped: true, margin: 5mm, numbering: none)
-  } else {
-    (:)
-  }),
-)
-#set text(font: "Noto Sans", size: 10pt)
+#let theme-mode = lower(sys.inputs.at("theme", default: "light"))
+#let is-dark = theme-mode == "dark"
 
 // Color definitions (CMYK)
 #let cb-black       = cmyk(0.0%, 0.0%, 0.0%, 100.0%)
@@ -29,19 +23,39 @@
 #let cb-green-lime  = cmyk(85.9%, 0.0%, 85.9%, 0.0%)
 #let cb-yellow      = cmyk(0.0%, 0.0%, 57.3%, 0.0%)
 
+#let page-fill = if is-dark { rgb("#14161a") } else { white }
+#let text-fill = if is-dark { rgb("#f1f3f5") } else { cb-black }
+
+#set page(
+  fill: page-fill,
+  ..(if paper-size != none and paper-size != "auto" {
+    (paper: lower(paper-size), flipped: true, margin: 5mm, numbering: none)
+  } else {
+    (:)
+  }),
+)
+#set text(font: "Noto Sans", size: 10pt, fill: text-fill)
+
 // Phase and property symbols
-#let solid  = text(font: "Noto Sans Symbols 2", fill: cb-brown)[⬛]
-#let liquid = text(font: "Noto Sans Symbols 2", fill: cb-green-sea)[▲]
+#let solid  = text(font: "Noto Sans Symbols 2", fill: if is-dark { cb-brown.lighten(30%) } else { cb-brown })[⬛]
+#let liquid = text(font: "Noto Sans Symbols 2", fill: if is-dark { cb-green-sea.lighten(30%) } else { cb-green-sea })[▲]
 #let gas    = text(font: "Noto Sans Symbols 2", fill: cb-blue-sky)[⬤]
 #let unk    = text(font: "Noto Sans Symbols 2", fill: cb-salmon-pink)[◆]
 #let radio  = text(font: "Noto Sans Symbols 2", fill: cb-rose)[☢]
 #let lab    = text(font: "Noto Color Emoji", fill: cb-green-lime)[⚗]
 
 // Fill & Stroke Styles
-#let make-fill(col) = (
-  stroke: 1.6pt + col,
-  fill: col.lighten(95%),
-)
+#let make-fill(col) = if is-dark {
+  (
+    stroke: 1.6pt + col.lighten(25%),
+    fill: color.mix((col, 24%), (rgb("#1c2026"), 76%)),
+  )
+} else {
+  (
+    stroke: 1.6pt + col,
+    fill: col.lighten(95%),
+  )
+}
 
 #let styles = (
   AlkaliMetal:        make-fill(cb-burgundy),
@@ -447,7 +461,7 @@
       )
     })
   } else {
-    set page(width: auto, height: auto, margin: 5mm, numbering: none)
+    set page(width: auto, height: auto, margin: 5mm, numbering: none, fill: page-fill)
     align(center + horizon, periodic-canvas)
   }
 }

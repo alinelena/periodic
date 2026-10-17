@@ -468,3 +468,65 @@ main.content {
   font-size: 0.74rem;
   border-radius: 0.25rem;
 }
+
+/* Dark Background Theme (matching Typst theme=dark) */
+body.pt-dark-theme {
+  background-color: #14161a;
+  color: #f1f3f5;
+}
+
+body.pt-dark-theme .pt-top-panel,
+body.pt-dark-theme .pt-toolbar-card,
+body.pt-dark-theme .pt-footer-card {
+  background-color: #1c2026;
+  color: #f1f3f5;
+}
+
+body.pt-dark-theme .pt-cell,
+body.pt-dark-theme .pt-cat-box {
+  border-color: var(--cat-stroke-dark, var(--cat-stroke));
+  background-color: var(--cat-fill-dark, var(--cat-fill));
+  color: #f1f3f5;
+}
+
+body.pt-dark-theme .pt-conf {
+  color: #dee2e6;
+}
+
+body.pt-dark-theme .pt-group-hdr,
+body.pt-dark-theme .pt-period-hdr,
+body.pt-dark-theme .pt-fblock-hdr {
+  background-color: #252a34;
+  color: #e9ecef;
+}
+
+body.pt-dark-theme .pt-group-hdr:hover,
+body.pt-dark-theme .pt-period-hdr:hover,
+body.pt-dark-theme .pt-fblock-hdr:hover,
+body.pt-dark-theme .pt-group-hdr.active,
+body.pt-dark-theme .pt-period-hdr.active {
+  background-color: #f8f9fa;
+  color: #14161a;
+}
+
+body.pt-dark-theme .pt-state-btn {
+  background-color: #252a34;
+  color: #f1f3f5;
+  border-color: #3b4252;
+}
+
+body.pt-dark-theme .pt-state-btn:hover,
+body.pt-dark-theme .pt-state-btn.active {
+  background-color: #f8f9fa;
+  color: #14161a;
+}
+
+body.pt-dark-theme .pt-callout-item:hover {
+  background-color: #3b4252;
+}
+
+body.pt-dark-theme .pt-dark-dl-btn {
+  border-color: #adb5bd;
+  color: #f1f3f5;
+}
+

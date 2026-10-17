@@ -35,11 +35,9 @@ jobs:
       - name: Set up uv and Python
         uses: astral-sh/setup-uv@v5
 
-      - name: Compile printable PDF and SVG from periodic-table.typ
+      - name: Compile printable PDFs (A0-A5, Auto) and SVGs in Light & Dark backgrounds
         run: |
-          typst compile periodic-table.typ periodic-table.pdf
-          typst compile --input paper=a4 periodic-table.typ periodic-table-a4.pdf
-          typst compile periodic-table.typ periodic-table.svg
+          uv run python3 scripts/build_pdfs.py
 
       - name: Build site HTML from element YAML files
         run: |

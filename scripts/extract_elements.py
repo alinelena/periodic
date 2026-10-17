@@ -123,6 +123,8 @@ def main() -> None:
                 "color_name": "cb-burgundy",
                 "stroke": "#98070c",
                 "fill": "#faede6",
+                "stroke_dark": "#af4833",
+                "fill_dark": "#3b2325",
             },
             "AlkalineEarthMetal": {
                 "id": "AlkalineEarthMetal",
@@ -130,6 +132,8 @@ def main() -> None:
                 "color_name": "cb-brown",
                 "stroke": "#9e5e06",
                 "fill": "#faf3ea",
+                "stroke_dark": "#b57d3c",
+                "fill_dark": "#392f28",
             },
             "TransMetal": {
                 "id": "TransMetal",
@@ -137,6 +141,8 @@ def main() -> None:
                 "color_name": "cb-salmon-pink",
                 "stroke": "#fdbe81",
                 "fill": "#fffbf7",
+                "stroke_dark": "#fece9d",
+                "fill_dark": "#4b423c",
             },
             "Metal": {
                 "id": "Metal",
@@ -144,6 +150,8 @@ def main() -> None:
                 "color_name": "cb-purple",
                 "stroke": "#5f015d",
                 "fill": "#f2ebf3",
+                "stroke_dark": "#7a427b",
+                "fill_dark": "#2d1f33",
             },
             "Metalloid": {
                 "id": "Metalloid",
@@ -151,6 +159,8 @@ def main() -> None:
                 "color_name": "cb-green-lime",
                 "stroke": "#00ae61",
                 "fill": "#f3f9f4",
+                "stroke_dark": "#58be86",
+                "fill_dark": "#233f35",
             },
             "Nonmetal": {
                 "id": "Nonmetal",
@@ -158,6 +168,8 @@ def main() -> None:
                 "color_name": "cb-green-sea",
                 "stroke": "#00739e",
                 "fill": "#eaf3f9",
+                "stroke_dark": "#008cb4",
+                "fill_dark": "#1f3340",
             },
             "Halogen": {
                 "id": "Halogen",
@@ -165,6 +177,8 @@ def main() -> None:
                 "color_name": "cb-blue-light",
                 "stroke": "#b1c8e7",
                 "fill": "#fafbfe",
+                "stroke_dark": "#c3d4ed",
+                "fill_dark": "#3c444f",
             },
             "NobleGas": {
                 "id": "NobleGas",
@@ -172,6 +186,8 @@ def main() -> None:
                 "color_name": "cb-blue-sky",
                 "stroke": "#6c9ed4",
                 "fill": "#f5f7fd",
+                "stroke_dark": "#8db0dd",
+                "fill_dark": "#2e3b4b",
             },
             "Lanthanide": {
                 "id": "Lanthanide",
@@ -179,6 +195,8 @@ def main() -> None:
                 "color_name": "cb-rose",
                 "stroke": "#f58a91",
                 "fill": "#fff8f7",
+                "stroke_dark": "#f7a5a8",
+                "fill_dark": "#4b383e",
             },
             "Actinide": {
                 "id": "Actinide",
@@ -186,6 +204,8 @@ def main() -> None:
                 "color_name": "cb-lilac",
                 "stroke": "#b57fb8",
                 "fill": "#f9f7fb",
+                "stroke_dark": "#c49ac7",
+                "fill_dark": "#3d3545",
             },
             "Unknown": {
                 "id": "Unknown",
@@ -193,6 +213,8 @@ def main() -> None:
                 "color_name": "cb-clay",
                 "stroke": "#e2ca00",
                 "fill": "#fdfbf1",
+                "stroke_dark": "#ebd557",
+                "fill_dark": "#454530",
             },
         },
         "phases": {

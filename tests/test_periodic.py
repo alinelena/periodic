@@ -65,6 +65,36 @@ class TestPeriodicTableSite(unittest.TestCase):
                 self.assertIn(svg_name, index_html)
                 self.assertTrue((SITE_DIR / svg_name).is_file(), f"Missing {svg_name} in _site")
 
+    def test_fit_screen_and_theme_styling(self) -> None:
+        css = (ROOT / "styles.css").read_text(encoding="utf-8")
+        js = (ROOT / "assets" / "periodic.js").read_text(encoding="utf-8")
+        app_html = (ROOT / "_includes" / "periodic-app.html").read_text(encoding="utf-8")
+
+        # CSS assertions for Fit Screen and Scroll modes
+        self.assertIn(".pt-grid:not(.pt-scroll-mode)", css)
+        self.assertIn(".pt-grid.pt-scroll-mode", css)
+        self.assertIn("min-width: 0 !important", css)
+        self.assertIn("min-width: 1540px !important", css)
+
+        # CSS assertions for Light / Dark themes
+        self.assertIn('[data-bs-theme="dark"]', css)
+        self.assertIn("body.pt-dark-theme", css)
+        self.assertIn("--pt-page-bg", css)
+
+        # JS assertions for theme & width management
+        self.assertIn("function setBgTheme", js)
+        self.assertIn("function setWidthMode", js)
+        self.assertIn("function setDensity", js)
+        self.assertIn("localStorage.getItem", js)
+
+        # HTML assertions for mode control radio inputs
+        self.assertIn('id="pt-width-fit"', app_html)
+        self.assertIn('id="pt-width-scroll"', app_html)
+        self.assertIn('id="pt-bg-light"', app_html)
+        self.assertIn('id="pt-bg-dark"', app_html)
+        self.assertIn('autocomplete="off"', app_html)
+
 
 if __name__ == "__main__":
     unittest.main()
+

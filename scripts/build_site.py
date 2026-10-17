@@ -436,23 +436,23 @@ def main() -> None:
           </div>
 
           <div class="btn-group btn-group-sm" role="group" aria-label="Card density">
-            <input type="radio" class="btn-check" name="pt-density" id="pt-density-detailed" value="detailed" checked>
+            <input type="radio" class="btn-check" name="pt-density" id="pt-density-detailed" value="detailed" autocomplete="off" checked>
             <label class="btn btn-outline-secondary" for="pt-density-detailed">Detailed</label>
-            <input type="radio" class="btn-check" name="pt-density" id="pt-density-compact" value="compact">
+            <input type="radio" class="btn-check" name="pt-density" id="pt-density-compact" value="compact" autocomplete="off">
             <label class="btn btn-outline-secondary" for="pt-density-compact">Compact</label>
           </div>
 
           <div class="btn-group btn-group-sm" role="group" aria-label="Width fit">
-            <input type="radio" class="btn-check" name="pt-width-mode" id="pt-width-fit" value="fit" checked>
+            <input type="radio" class="btn-check" name="pt-width-mode" id="pt-width-fit" value="fit" autocomplete="off" checked>
             <label class="btn btn-outline-secondary" for="pt-width-fit" title="Fit table to screen width">Fit Screen</label>
-            <input type="radio" class="btn-check" name="pt-width-mode" id="pt-width-scroll" value="scroll">
+            <input type="radio" class="btn-check" name="pt-width-mode" id="pt-width-scroll" value="scroll" autocomplete="off">
             <label class="btn btn-outline-secondary" for="pt-width-scroll" title="Allow horizontal scroll">Scroll</label>
           </div>
 
           <div class="btn-group btn-group-sm" role="group" aria-label="Background theme">
-            <input type="radio" class="btn-check" name="pt-bg-theme" id="pt-bg-light" value="light" checked>
+            <input type="radio" class="btn-check" name="pt-bg-theme" id="pt-bg-light" value="light" autocomplete="off" checked>
             <label class="btn btn-outline-secondary" for="pt-bg-light" title="Light background">☀️ Light</label>
-            <input type="radio" class="btn-check" name="pt-bg-theme" id="pt-bg-dark" value="dark">
+            <input type="radio" class="btn-check" name="pt-bg-theme" id="pt-bg-dark" value="dark" autocomplete="off">
             <label class="btn btn-outline-secondary" for="pt-bg-dark" title="Dark background">🌙 Dark</label>
           </div>
         </div>

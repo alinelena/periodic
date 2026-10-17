@@ -1,16 +1,52 @@
 /* Periodic Table Website Styles (Bootstrap 5 + Typst CeTZ Theme) */
 
 :root {
+  --pt-page-bg: #f8f9fa;
+  --pt-card-bg: #ffffff;
+  --pt-card-border: #e9ecef;
+  --pt-text-main: #212529;
+  --pt-text-muted: #6c757d;
+  --pt-hdr-bg: #e9ecef;
+  --pt-hdr-text: #343a40;
+  --pt-hdr-hover-bg: #212529;
+  --pt-hdr-hover-text: #ffffff;
+  --pt-table-bg: #ffffff;
+  --pt-table-border: #dee2e6;
+  --pt-input-bg: #ffffff;
+  --pt-input-border: #ced4da;
+  --pt-input-group-addon-bg: #e9ecef;
+  --pt-callout-hover-bg: #fff3cd;
   --pt-text-dark: #231f20;
-  --pt-card-radius: 10px;
+}
+
+[data-bs-theme="dark"],
+body.pt-dark-theme {
+  --pt-page-bg: #14161a;
+  --pt-card-bg: #1c2026;
+  --pt-card-border: #2b313c;
+  --pt-text-main: #f1f3f5;
+  --pt-text-muted: #9aa5b1;
+  --pt-hdr-bg: #252a34;
+  --pt-hdr-text: #e9ecef;
+  --pt-hdr-hover-bg: #f8f9fa;
+  --pt-hdr-hover-text: #14161a;
+  --pt-table-bg: #1c2026;
+  --pt-table-border: #323846;
+  --pt-input-bg: #252a34;
+  --pt-input-border: #3b4252;
+  --pt-input-group-addon-bg: #20242d;
+  --pt-callout-hover-bg: #323946;
+  --pt-text-dark: #f1f3f5;
 }
 
 body {
   font-family: "Noto Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  background-color: #f8f9fa;
+  background-color: var(--pt-page-bg) !important;
+  color: var(--pt-text-main);
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-/* Make Quarto full-width container use maximum horizontal space with zero overflow */
+/* Make Quarto full-width container use maximum horizontal space with zero unwanted scroll */
 html, body {
   max-width: 100vw;
   overflow-x: hidden;
@@ -30,46 +66,70 @@ main.content,
   padding-top: 0.25rem;
 }
 
-.pt-top-panel {
-  background: #ffffff;
+.pt-top-panel,
+.pt-toolbar-card,
+.pt-footer-card,
+.card {
+  background-color: var(--pt-card-bg) !important;
+  border-color: var(--pt-card-border) !important;
+  color: var(--pt-text-main) !important;
 }
 
 .pt-sample-wrapper {
   max-width: 100%;
 }
 
-/* Scroll wrapper: uses container queries so child element cells scale with width */
+/* Scroll wrapper */
 .pt-scroll-wrapper {
   width: 100%;
   max-width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
   padding-bottom: 0.35rem;
   container-type: inline-size;
   container-name: ptgrid;
 }
 
+/* Default (Fit Screen): strictly fit within viewport width with NO horizontal scrollbar */
+.pt-scroll-wrapper:not(.pt-scroll-mode) {
+  overflow-x: hidden !important;
+  overflow-y: hidden;
+}
+
+/* Scrollable mode: user explicitly requested horizontal scroll bar */
+.pt-scroll-wrapper.pt-scroll-mode {
+  overflow-x: auto !important;
+  overflow-y: hidden;
+}
+
 /* 19 columns: Col 1 = Period header, Cols 2..19 = Groups 1..18 */
-/* Default: fits 100% of the screen width with no horizontal scrollbar */
 .pt-grid {
   display: grid;
-  width: 100%;
-  max-width: 100%;
-  min-width: 0;
-  grid-template-columns: minmax(18px, 1.8fr) repeat(18, minmax(0, 5.45fr));
-  grid-template-rows: auto repeat(7, 1fr) clamp(4px, 0.8cqw, 14px) repeat(2, 1fr);
-  gap: clamp(1px, 0.28cqw, 4px);
   align-items: stretch;
+  gap: clamp(1px, 0.28cqw, 4px);
+  grid-template-rows: auto repeat(7, 1fr) clamp(4px, 0.8cqw, 14px) repeat(2, 1fr);
+  transition: width 0.15s ease;
 }
 
-/* Scrollable mode (when user explicitly clicks "Scroll" in toolbar) */
+/* Fit Screen: strictly 100% width with min-width: 0 */
+.pt-grid:not(.pt-scroll-mode) {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  grid-template-columns: minmax(14px, 1.8fr) repeat(18, minmax(0, 5.45fr));
+}
+
+/* Scrollable mode: full width with min-width 1540px */
 .pt-grid.pt-scroll-mode {
-  min-width: 1540px;
+  width: max-content !important;
+  min-width: 1540px !important;
+  grid-template-columns: 28px repeat(18, 84px);
 }
 
-/* Compact mode allows tighter vertical footprint */
-.pt-grid.pt-compact-mode {
-  grid-template-columns: minmax(16px, 1.6fr) repeat(18, minmax(0, 5.46fr));
+/* Compact mode */
+.pt-grid.pt-compact-mode:not(.pt-scroll-mode) {
+  grid-template-columns: minmax(14px, 1.6fr) repeat(18, minmax(0, 5.46fr));
+}
+.pt-grid.pt-compact-mode.pt-scroll-mode {
+  grid-template-columns: 24px repeat(18, 80px);
 }
 
 /* Axis corner & Group / Period headers */
@@ -80,7 +140,7 @@ main.content,
   align-items: center;
   font-size: clamp(0.42rem, 0.6cqw, 0.65rem);
   font-weight: 700;
-  color: #6c757d;
+  color: var(--pt-text-muted);
   line-height: 1.1;
   user-select: none;
 }
@@ -89,8 +149,8 @@ main.content,
 .pt-period-hdr,
 .pt-fblock-hdr {
   border: 1px solid transparent;
-  background: #e9ecef;
-  color: #343a40;
+  background-color: var(--pt-hdr-bg);
+  color: var(--pt-hdr-text);
   border-radius: clamp(2px, 0.35cqw, 6px);
   font-size: clamp(0.5rem, 0.76cqw, 0.82rem);
   display: flex;
@@ -106,8 +166,8 @@ main.content,
 .pt-fblock-hdr:hover,
 .pt-group-hdr.active,
 .pt-period-hdr.active {
-  background: #212529;
-  color: #ffffff;
+  background-color: var(--pt-hdr-hover-bg);
+  color: var(--pt-hdr-hover-text);
   transform: translateY(-1px);
 }
 
@@ -129,11 +189,17 @@ main.content,
 
 /* Element Card matching periodic-table.typ */
 .pt-cell {
-  border: clamp(1px, 0.15cqw, 2.2px) solid var(--cat-stroke, #00739e);
-  background-color: var(--cat-fill, #eaf3f9);
-  color: var(--pt-text-dark);
-  border-radius: clamp(3px, 0.45cqw, 8px);
-  padding: clamp(1px, 0.3cqw, 4px) clamp(1px, 0.28cqw, 4px);
+  /* Crucial: allow cell to shrink down to zero without forcing column min-content */
+  min-width: 0 !important;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  border: clamp(1px, 0.15cqw, 2px) solid var(--cell-stroke, var(--cat-stroke, #00739e));
+  background-color: var(--cell-fill, var(--cat-fill, #eaf3f9));
+  color: var(--cell-text, var(--pt-text-dark));
+  border-radius: clamp(2px, 0.4cqw, 8px);
+  padding: clamp(1px, 0.28cqw, 4px) clamp(1px, 0.25cqw, 4px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -141,16 +207,23 @@ main.content,
   cursor: pointer;
   user-select: none;
   transition: transform 0.14s ease, box-shadow 0.14s ease, opacity 0.18s ease, filter 0.18s ease;
-  line-height: 1.1;
-  min-height: clamp(38px, 5.8cqw, 94px);
+  line-height: 1.05;
+  min-height: clamp(34px, 5.5cqw, 92px);
   aspect-ratio: 1 / 1.05;
+}
+
+[data-bs-theme="dark"] .pt-cell,
+body.pt-dark-theme .pt-cell {
+  --cell-stroke: var(--cat-stroke-dark, var(--cat-stroke));
+  --cell-fill: var(--cat-fill-dark, var(--cat-fill));
+  --cell-text: #f1f3f5;
 }
 
 .pt-cell:hover,
 .pt-cell:focus-visible {
   transform: scale(1.07);
   z-index: 15;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
   outline: none;
 }
 
@@ -170,8 +243,10 @@ main.content,
   justify-content: space-between;
   align-items: baseline;
   gap: 1px;
-  font-size: clamp(0.35rem, 0.52cqw, 0.64rem);
-  width: 100%;
+  font-size: clamp(0.33rem, 0.52cqw, 0.64rem);
+  width: 100% !important;
+  min-width: 0 !important;
+  overflow: hidden;
   line-height: 1.05;
 }
 
@@ -181,7 +256,9 @@ main.content,
   align-items: center;
   gap: 1px;
   white-space: nowrap;
-  font-size: clamp(0.42rem, 0.62cqw, 0.72rem);
+  font-size: clamp(0.40rem, 0.62cqw, 0.72rem);
+  min-width: 0;
+  overflow: hidden;
 }
 
 .pt-phase-icon,
@@ -191,12 +268,13 @@ main.content,
 }
 
 .pt-ox {
-  font-size: clamp(0.32rem, 0.48cqw, 0.58rem);
+  font-size: clamp(0.30rem, 0.46cqw, 0.58rem);
   text-align: right;
   letter-spacing: -0.02em;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  min-width: 0;
   max-width: 58%;
 }
 
@@ -205,37 +283,48 @@ main.content,
 .pt-rad,
 .pt-aff {
   font-weight: 600;
-  font-size: clamp(0.34rem, 0.5cqw, 0.62rem);
+  font-size: clamp(0.32rem, 0.48cqw, 0.62rem);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  min-width: 0;
 }
 
 .pt-sym {
-  font-size: clamp(0.72rem, 1.35cqw, 1.35rem);
+  font-size: clamp(0.68rem, 1.3cqw, 1.35rem);
   font-weight: 800;
   text-align: center;
   line-height: 1.05;
   margin: 1px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  min-width: 0;
 }
 
 .pt-name {
-  font-size: clamp(0.4rem, 0.6cqw, 0.72rem);
+  font-size: clamp(0.36rem, 0.58cqw, 0.72rem);
   font-weight: 700;
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   line-height: 1.05;
+  min-width: 0;
 }
 
 .pt-conf {
-  font-size: clamp(0.32rem, 0.48cqw, 0.58rem);
+  font-size: clamp(0.30rem, 0.46cqw, 0.58rem);
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  min-width: 0;
   color: #343a40;
+}
+
+[data-bs-theme="dark"] .pt-conf,
+body.pt-dark-theme .pt-conf {
+  color: #dee2e6;
 }
 
 .pt-conf sup {
@@ -247,10 +336,17 @@ main.content,
   font-size: clamp(0.36rem, 0.5cqw, 0.62rem);
   font-weight: 700;
   text-align: center;
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.82);
+  color: #212529;
   border-radius: 3px;
   margin-top: 1px;
   padding: 0 2px;
+}
+
+[data-bs-theme="dark"] .pt-heatmap-val,
+body.pt-dark-theme .pt-heatmap-val {
+  background: rgba(0, 0, 0, 0.65);
+  color: #f8f9fa;
 }
 
 .pt-grid[data-color-mode="atomic_radius_angstrom"] .pt-heatmap-val,
@@ -263,7 +359,7 @@ main.content,
 
 /* Compact mode hides secondary rows for a clean compact view */
 .pt-grid.pt-compact-mode .pt-cell {
-  min-height: clamp(32px, 4.2cqw, 62px);
+  min-height: clamp(30px, 4.2cqw, 60px);
   padding: 2px 3px;
 }
 
@@ -271,40 +367,70 @@ main.content,
 .pt-grid.pt-compact-mode .pt-row-mid1,
 .pt-grid.pt-compact-mode .pt-row-mid2,
 .pt-grid.pt-compact-mode .pt-conf {
-  display: none;
+  display: none !important;
+}
+
+/* Scroll mode: Ensure full size cards with all rows shown */
+.pt-grid.pt-scroll-mode .pt-cell {
+  min-width: 84px !important;
+  min-height: 94px !important;
+  aspect-ratio: auto;
+}
+
+.pt-grid.pt-scroll-mode:not(.pt-compact-mode) .pt-row,
+.pt-grid.pt-scroll-mode:not(.pt-compact-mode) .pt-row-mid1,
+.pt-grid.pt-scroll-mode:not(.pt-compact-mode) .pt-row-mid2 {
+  display: flex !important;
+}
+
+.pt-grid.pt-scroll-mode:not(.pt-compact-mode) .pt-ox {
+  display: inline-block !important;
+}
+
+.pt-grid.pt-scroll-mode:not(.pt-compact-mode) .pt-conf {
+  display: block !important;
+}
+
+.pt-grid.pt-scroll-mode .pt-name {
+  display: block !important;
+}
+
+.pt-grid.pt-scroll-mode .pt-group-roman {
+  display: inline !important;
 }
 
 /* Responsive container queries to keep cell contents sharp and legible on any screen width */
+/* Notice: only active when NOT in scroll mode */
 @container ptgrid (max-width: 1220px) {
-  .pt-row-mid2 {
+  .pt-grid:not(.pt-scroll-mode) .pt-row-mid2 {
     display: none; /* Hide atomic radius and affinity row when width is compact */
   }
 }
 
 @container ptgrid (max-width: 960px) {
-  .pt-ox,
-  .pt-conf {
+  .pt-grid:not(.pt-scroll-mode) .pt-ox,
+  .pt-grid:not(.pt-scroll-mode) .pt-conf {
     display: none; /* Hide electron configuration and oxidation states on narrower screens */
   }
 }
 
 @container ptgrid (max-width: 760px) {
-  .pt-row-mid1 {
+  .pt-grid:not(.pt-scroll-mode) .pt-row-mid1 {
     display: none; /* Hide 1st IE & mass row on tablet/mobile screens */
   }
-  .pt-name {
-    font-size: clamp(0.36rem, 1.3cqw, 0.55rem);
+  .pt-grid:not(.pt-scroll-mode) .pt-name {
+    font-size: clamp(0.34rem, 1.2cqw, 0.55rem);
   }
-  .pt-cell {
-    min-height: clamp(32px, 6cqw, 46px);
+  .pt-grid:not(.pt-scroll-mode) .pt-cell {
+    min-height: clamp(30px, 5.5cqw, 46px);
   }
 }
 
 @container ptgrid (max-width: 520px) {
-  .pt-name {
+  .pt-grid:not(.pt-scroll-mode) .pt-name {
     display: none; /* On narrow mobile, show atomic number + phase and symbol */
   }
-  .pt-group-roman {
+  .pt-grid:not(.pt-scroll-mode) .pt-group-roman {
     display: none;
   }
 }
@@ -344,6 +470,7 @@ main.content,
 .pt-grid[data-highlight-prop="conf"] .pt-conf {
   opacity: 1 !important;
   background-color: #fff3cd;
+  color: #212529 !important;
   border-radius: 3px;
   padding: 0 2px;
   font-weight: 800;
@@ -436,7 +563,7 @@ main.content,
 }
 
 .pt-callout-item:hover {
-  background-color: #fff3cd;
+  background-color: var(--pt-callout-hover-bg);
 }
 
 .pt-callout-sym {
@@ -471,6 +598,13 @@ main.content,
   transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
 
+[data-bs-theme="dark"] .pt-cat-box,
+body.pt-dark-theme .pt-cat-box {
+  border-color: var(--cat-stroke-dark, var(--cat-stroke));
+  background-color: var(--cat-fill-dark, var(--cat-fill));
+  color: #f1f3f5;
+}
+
 .pt-cat-box:hover {
   transform: translateY(-1px);
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
@@ -481,17 +615,28 @@ main.content,
   transform: translateY(-1px);
 }
 
+[data-bs-theme="dark"] .pt-cat-box.active,
+body.pt-dark-theme .pt-cat-box.active {
+  box-shadow: 0 0 0 2.5px #f8f9fa;
+}
+
 .pt-cat-count {
   background: rgba(255, 255, 255, 0.85);
   color: #212529;
   font-size: 0.66rem;
 }
 
+[data-bs-theme="dark"] .pt-cat-count,
+body.pt-dark-theme .pt-cat-count {
+  background: rgba(0, 0, 0, 0.6);
+  color: #f8f9fa;
+}
+
 /* State & Property Buttons */
 .pt-state-btn {
-  border: 1px solid #dee2e6;
-  background: #ffffff;
-  color: #212529;
+  border: 1px solid var(--pt-card-border);
+  background-color: var(--pt-card-bg);
+  color: var(--pt-text-main);
   font-size: 0.76rem;
   font-weight: 600;
   display: inline-flex;
@@ -501,9 +646,9 @@ main.content,
 
 .pt-state-btn:hover,
 .pt-state-btn.active {
-  background: #212529;
-  color: #ffffff;
-  border-color: #212529;
+  background-color: var(--pt-hdr-hover-bg);
+  color: var(--pt-hdr-hover-text);
+  border-color: var(--pt-hdr-hover-bg);
 }
 
 /* Continuous Heatmap Gradient Bar */
@@ -535,64 +680,88 @@ main.content,
   border-radius: 0.25rem;
 }
 
-/* Dark Background Theme (matching Typst theme=dark) */
-body.pt-dark-theme {
-  background-color: #14161a;
-  color: #f1f3f5;
+/* Form controls & Buttons styling across themes */
+[data-bs-theme="dark"] .form-control,
+[data-bs-theme="dark"] .form-select,
+body.pt-dark-theme .form-control,
+body.pt-dark-theme .form-select {
+  background-color: var(--pt-input-bg) !important;
+  color: var(--pt-text-main) !important;
+  border-color: var(--pt-input-border) !important;
 }
 
-body.pt-dark-theme .pt-top-panel,
-body.pt-dark-theme .pt-toolbar-card,
-body.pt-dark-theme .pt-footer-card {
-  background-color: #1c2026;
-  color: #f1f3f5;
+[data-bs-theme="dark"] .input-group-text,
+body.pt-dark-theme .input-group-text {
+  background-color: var(--pt-input-group-addon-bg) !important;
+  color: var(--pt-text-muted) !important;
+  border-color: var(--pt-input-border) !important;
 }
 
-body.pt-dark-theme .pt-cell,
-body.pt-dark-theme .pt-cat-box {
-  border-color: var(--cat-stroke-dark, var(--cat-stroke));
-  background-color: var(--cat-fill-dark, var(--cat-fill));
-  color: #f1f3f5;
+.btn-check:checked + .btn-outline-secondary {
+  background-color: #212529;
+  color: #ffffff;
+  border-color: #212529;
+  font-weight: 700;
 }
 
-body.pt-dark-theme .pt-conf {
+[data-bs-theme="dark"] .btn-outline-secondary,
+body.pt-dark-theme .btn-outline-secondary {
+  border-color: #495057;
   color: #dee2e6;
 }
 
-body.pt-dark-theme .pt-group-hdr,
-body.pt-dark-theme .pt-period-hdr,
-body.pt-dark-theme .pt-fblock-hdr {
-  background-color: #252a34;
-  color: #e9ecef;
-}
-
-body.pt-dark-theme .pt-group-hdr:hover,
-body.pt-dark-theme .pt-period-hdr:hover,
-body.pt-dark-theme .pt-fblock-hdr:hover,
-body.pt-dark-theme .pt-group-hdr.active,
-body.pt-dark-theme .pt-period-hdr.active {
+[data-bs-theme="dark"] .btn-check:checked + .btn-outline-secondary,
+body.pt-dark-theme .btn-check:checked + .btn-outline-secondary {
   background-color: #f8f9fa;
   color: #14161a;
+  border-color: #f8f9fa;
+  font-weight: 700;
 }
 
-body.pt-dark-theme .pt-state-btn {
-  background-color: #252a34;
-  color: #f1f3f5;
-  border-color: #3b4252;
+.pt-dark-dl-btn {
+  border-color: #495057;
 }
 
-body.pt-dark-theme .pt-state-btn:hover,
-body.pt-dark-theme .pt-state-btn.active {
-  background-color: #f8f9fa;
-  color: #14161a;
-}
-
-body.pt-dark-theme .pt-callout-item:hover {
-  background-color: #3b4252;
-}
-
+[data-bs-theme="dark"] .pt-dark-dl-btn,
 body.pt-dark-theme .pt-dark-dl-btn {
   border-color: #adb5bd;
   color: #f1f3f5;
 }
 
+/* Sortable Data Table styling */
+#pt-data-table {
+  color: var(--pt-text-main);
+  border-color: var(--pt-table-border);
+}
+
+#pt-data-table th,
+#pt-data-table td {
+  background-color: var(--pt-table-bg);
+  color: var(--pt-text-main);
+  border-color: var(--pt-table-border);
+}
+
+[data-bs-theme="dark"] #pt-data-table tbody tr:hover td,
+body.pt-dark-theme #pt-data-table tbody tr:hover td {
+  background-color: #252a34;
+}
+
+/* Modal Dark Theme */
+[data-bs-theme="dark"] .modal-content,
+body.pt-dark-theme .modal-content {
+  background-color: var(--pt-card-bg);
+  color: var(--pt-text-main);
+  border-color: var(--pt-card-border);
+}
+
+[data-bs-theme="dark"] .modal-header,
+[data-bs-theme="dark"] .modal-footer,
+body.pt-dark-theme .modal-header,
+body.pt-dark-theme .modal-footer {
+  border-color: var(--pt-card-border);
+}
+
+[data-bs-theme="dark"] .btn-close,
+body.pt-dark-theme .btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}

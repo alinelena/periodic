@@ -1,0 +1,38 @@
+atomic_number: 92
+symbol: U
+name: Uranium
+category: Actinide
+category_label: Actinide
+period: 7
+group: null
+group_label: Actinide
+block: f
+grid_row: 10
+grid_col: 7
+phase: solid
+lab_made: false
+radioactive_marker: false
+is_radioactive: true
+atomic_mass: '238.029'
+atomic_mass_value: 238.029
+atomic_mass_most_stable_isotope: false
+oxidation_states: '*6* 5 4 3'
+oxidation_states_parsed:
+- state: '6'
+  common: true
+- state: '5'
+  common: false
+- state: '4'
+  common: false
+- state: '3'
+  common: false
+ionization_energy: '6.194'
+ionization_energy_ev: 6.194
+electron_configuration: '[Rn] 5f^{3}6d^{1}7s^{2}'
+electron_configuration_formatted: '[Rn]5f³6d¹7s²'
+electron_configuration_html: '[Rn]5f<sup>3</sup>6d<sup>1</sup>7s<sup>2</sup>'
+atomic_radius: '2.41'
+atomic_radius_angstrom: 2.41
+electron_affinity: U
+electron_affinity_ev: null
+rsc_url: https://www.rsc.org/periodic-table/element/92/uranium

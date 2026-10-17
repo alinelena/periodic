@@ -1,0 +1,32 @@
+atomic_number: 103
+symbol: Lr
+name: Lawrencium
+category: Actinide
+category_label: Actinide
+period: 7
+group: null
+group_label: Actinide
+block: f
+grid_row: 10
+grid_col: 18
+phase: solid
+lab_made: true
+radioactive_marker: false
+is_radioactive: true
+atomic_mass: '[262]'
+atomic_mass_value: 262.0
+atomic_mass_most_stable_isotope: true
+oxidation_states: '*3*'
+oxidation_states_parsed:
+- state: '3'
+  common: true
+ionization_energy: '4.9'
+ionization_energy_ev: 4.9
+electron_configuration: '[Rn] 5f^{14}7s^{2}7p^{1}'
+electron_configuration_formatted: '[Rn]5f¹⁴7s²7p¹'
+electron_configuration_html: '[Rn]5f<sup>14</sup>7s<sup>2</sup>7p<sup>1</sup>'
+atomic_radius: '2.46'
+atomic_radius_angstrom: 2.46
+electron_affinity: U
+electron_affinity_ev: null
+rsc_url: https://www.rsc.org/periodic-table/element/103/lawrencium

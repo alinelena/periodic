@@ -1,0 +1,32 @@
+atomic_number: 49
+symbol: In
+name: Indium
+category: Metal
+category_label: Post Trans Metal
+period: 5
+group: 13
+group_label: 13 IIIA
+block: p
+grid_row: 5
+grid_col: 13
+phase: solid
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '114.818'
+atomic_mass_value: 114.818
+atomic_mass_most_stable_isotope: false
+oxidation_states: '*3*'
+oxidation_states_parsed:
+- state: '3'
+  common: true
+ionization_energy: '5.786'
+ionization_energy_ev: 5.786
+electron_configuration: '[Kr] 4d^{10}5s^{2}5p^{1}'
+electron_configuration_formatted: '[Kr]4d¹⁰5s²5p¹'
+electron_configuration_html: '[Kr]4d<sup>10</sup>5s<sup>2</sup>5p<sup>1</sup>'
+atomic_radius: '1.93'
+atomic_radius_angstrom: 1.93
+electron_affinity: '0.2995'
+electron_affinity_ev: 0.2995
+rsc_url: https://www.rsc.org/periodic-table/element/49/indium

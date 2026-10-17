@@ -1,0 +1,32 @@
+atomic_number: 39
+symbol: Y
+name: Yttrium
+category: TransMetal
+category_label: Transitional Metal
+period: 5
+group: 3
+group_label: 3 IIIA
+block: d
+grid_row: 5
+grid_col: 3
+phase: solid
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '88.906'
+atomic_mass_value: 88.906
+atomic_mass_most_stable_isotope: false
+oxidation_states: '*3*'
+oxidation_states_parsed:
+- state: '3'
+  common: true
+ionization_energy: '6.217'
+ionization_energy_ev: 6.217
+electron_configuration: '[Kr] 4d^{1}5s^{2}'
+electron_configuration_formatted: '[Kr]4d¹5s²'
+electron_configuration_html: '[Kr]4d<sup>1</sup>5s<sup>2</sup>'
+atomic_radius: '2.32'
+atomic_radius_angstrom: 2.32
+electron_affinity: '0.307'
+electron_affinity_ev: 0.307
+rsc_url: https://www.rsc.org/periodic-table/element/39/yttrium

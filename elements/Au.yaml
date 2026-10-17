@@ -1,0 +1,42 @@
+atomic_number: 79
+symbol: Au
+name: Gold
+category: TransMetal
+category_label: Transitional Metal
+period: 6
+group: 11
+group_label: 11 IB
+block: d
+grid_row: 6
+grid_col: 11
+phase: solid
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '196.967'
+atomic_mass_value: 196.967
+atomic_mass_most_stable_isotope: false
+oxidation_states: 5 4 *3* 2 1 -1
+oxidation_states_parsed:
+- state: '5'
+  common: false
+- state: '4'
+  common: false
+- state: '3'
+  common: true
+- state: '2'
+  common: false
+- state: '1'
+  common: false
+- state: '-1'
+  common: false
+ionization_energy: '9.225'
+ionization_energy_ev: 9.225
+electron_configuration: '[Xe] 4f^{14}5d^{10}6s^{1}'
+electron_configuration_formatted: '[Xe]4f¹⁴5d¹⁰6s¹'
+electron_configuration_html: '[Xe]4f<sup>14</sup>5d<sup>10</sup>6s<sup>1</sup>'
+atomic_radius: '2.14'
+atomic_radius_angstrom: 2.14
+electron_affinity: '2.309'
+electron_affinity_ev: 2.309
+rsc_url: https://www.rsc.org/periodic-table/element/79/gold

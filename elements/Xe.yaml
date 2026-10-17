@@ -1,0 +1,36 @@
+atomic_number: 54
+symbol: Xe
+name: Xenon
+category: NobleGas
+category_label: Noble gas
+period: 5
+group: 18
+group_label: 18 VIIIA
+block: p
+grid_row: 5
+grid_col: 18
+phase: gas
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '131.293'
+atomic_mass_value: 131.293
+atomic_mass_most_stable_isotope: false
+oxidation_states: 6 4 2
+oxidation_states_parsed:
+- state: '6'
+  common: false
+- state: '4'
+  common: false
+- state: '2'
+  common: false
+ionization_energy: '12.13'
+ionization_energy_ev: 12.13
+electron_configuration: '[Kr] 4d^{10}5s^{2}5p^{6}'
+electron_configuration_formatted: '[Kr]4d¹⁰5s²5p⁶'
+electron_configuration_html: '[Kr]4d<sup>10</sup>5s<sup>2</sup>5p<sup>6</sup>'
+atomic_radius: '2.16'
+atomic_radius_angstrom: 2.16
+electron_affinity: Ns
+electron_affinity_ev: null
+rsc_url: https://www.rsc.org/periodic-table/element/54/xenon

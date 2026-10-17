@@ -1,0 +1,32 @@
+atomic_number: 86
+symbol: Rn
+name: Radon
+category: NobleGas
+category_label: Noble gas
+period: 6
+group: 18
+group_label: 18 VIIIA
+block: p
+grid_row: 6
+grid_col: 18
+phase: gas
+lab_made: false
+radioactive_marker: false
+is_radioactive: true
+atomic_mass: '[222]'
+atomic_mass_value: 222.0
+atomic_mass_most_stable_isotope: true
+oxidation_states: '*2*'
+oxidation_states_parsed:
+- state: '2'
+  common: true
+ionization_energy: '10.75'
+ionization_energy_ev: 10.75
+electron_configuration: '[Xe] 4f^{14}5d^{10}6s^{2}6p^{6}'
+electron_configuration_formatted: '[Xe]4f¹⁴5d¹⁰6s²6p⁶'
+electron_configuration_html: '[Xe]4f<sup>14</sup>5d<sup>10</sup>6s<sup>2</sup>6p<sup>6</sup>'
+atomic_radius: '2.2'
+atomic_radius_angstrom: 2.2
+electron_affinity: Ns
+electron_affinity_ev: null
+rsc_url: https://www.rsc.org/periodic-table/element/86/radon

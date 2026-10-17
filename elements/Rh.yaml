@@ -1,0 +1,42 @@
+atomic_number: 45
+symbol: Rh
+name: Rhodium
+category: TransMetal
+category_label: Transitional Metal
+period: 5
+group: 9
+group_label: 9 VIIIB
+block: d
+grid_row: 5
+grid_col: 9
+phase: solid
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '102.906'
+atomic_mass_value: 102.906
+atomic_mass_most_stable_isotope: false
+oxidation_states: 5 4 *3* 2 1 0
+oxidation_states_parsed:
+- state: '5'
+  common: false
+- state: '4'
+  common: false
+- state: '3'
+  common: true
+- state: '2'
+  common: false
+- state: '1'
+  common: false
+- state: '0'
+  common: false
+ionization_energy: '7.459'
+ionization_energy_ev: 7.459
+electron_configuration: '[Kr] 4d^{8}5s^{1}'
+electron_configuration_formatted: '[Kr]4d⁸5s¹'
+electron_configuration_html: '[Kr]4d<sup>8</sup>5s<sup>1</sup>'
+atomic_radius: '2.1'
+atomic_radius_angstrom: 2.1
+electron_affinity: '1.137'
+electron_affinity_ev: 1.137
+rsc_url: https://www.rsc.org/periodic-table/element/45/rhodium

@@ -1,0 +1,38 @@
+atomic_number: 94
+symbol: Pu
+name: Plutonium
+category: Actinide
+category_label: Actinide
+period: 7
+group: null
+group_label: Actinide
+block: f
+grid_row: 10
+grid_col: 9
+phase: solid
+lab_made: true
+radioactive_marker: false
+is_radioactive: true
+atomic_mass: '[244]'
+atomic_mass_value: 244.0
+atomic_mass_most_stable_isotope: true
+oxidation_states: 6 5 *4* 3
+oxidation_states_parsed:
+- state: '6'
+  common: false
+- state: '5'
+  common: false
+- state: '4'
+  common: true
+- state: '3'
+  common: false
+ionization_energy: '6.026'
+ionization_energy_ev: 6.026
+electron_configuration: '[Rn] 5f^{6}7s^{2}'
+electron_configuration_formatted: '[Rn]5f⁶7s²'
+electron_configuration_html: '[Rn]5f<sup>6</sup>7s<sup>2</sup>'
+atomic_radius: '2.43'
+atomic_radius_angstrom: 2.43
+electron_affinity: U
+electron_affinity_ev: null
+rsc_url: https://www.rsc.org/periodic-table/element/94/plutonium

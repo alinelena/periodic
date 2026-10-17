@@ -1,0 +1,32 @@
+atomic_number: 87
+symbol: Fr
+name: Francium
+category: AlkaliMetal
+category_label: Alkali Metal
+period: 7
+group: 1
+group_label: 1 IA
+block: s
+grid_row: 7
+grid_col: 1
+phase: solid
+lab_made: false
+radioactive_marker: false
+is_radioactive: true
+atomic_mass: '[223]'
+atomic_mass_value: 223.0
+atomic_mass_most_stable_isotope: true
+oxidation_states: '*1*'
+oxidation_states_parsed:
+- state: '1'
+  common: true
+ionization_energy: '4.073'
+ionization_energy_ev: 4.073
+electron_configuration: '[Rn] 7s^{1}'
+electron_configuration_formatted: '[Rn]7s¹'
+electron_configuration_html: '[Rn]7s<sup>1</sup>'
+atomic_radius: '3.48'
+atomic_radius_angstrom: 3.48
+electron_affinity: '0.46'
+electron_affinity_ev: 0.46
+rsc_url: https://www.rsc.org/periodic-table/element/87/francium

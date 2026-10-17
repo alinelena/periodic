@@ -1,0 +1,32 @@
+atomic_number: 73
+symbol: Ta
+name: Tantalum
+category: TransMetal
+category_label: Transitional Metal
+period: 6
+group: 5
+group_label: 5 VB
+block: d
+grid_row: 6
+grid_col: 5
+phase: solid
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '180.948'
+atomic_mass_value: 180.948
+atomic_mass_most_stable_isotope: false
+oxidation_states: '*5*'
+oxidation_states_parsed:
+- state: '5'
+  common: true
+ionization_energy: '7.549'
+ionization_energy_ev: 7.549
+electron_configuration: '[Xe] 4f^{14}5d^{3}6s^{2}'
+electron_configuration_formatted: '[Xe]4f¹⁴5d³6s²'
+electron_configuration_html: '[Xe]4f<sup>14</sup>5d<sup>3</sup>6s<sup>2</sup>'
+atomic_radius: '2.22'
+atomic_radius_angstrom: 2.22
+electron_affinity: '0.322'
+electron_affinity_ev: 0.322
+rsc_url: https://www.rsc.org/periodic-table/element/73/tantalum

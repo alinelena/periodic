@@ -1,0 +1,36 @@
+atomic_number: 52
+symbol: Te
+name: Tellurium
+category: Metalloid
+category_label: Metalloid
+period: 5
+group: 16
+group_label: 16 VIA
+block: p
+grid_row: 5
+grid_col: 16
+phase: solid
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '127.60'
+atomic_mass_value: 127.6
+atomic_mass_most_stable_isotope: false
+oxidation_states: 6 *4* -2
+oxidation_states_parsed:
+- state: '6'
+  common: false
+- state: '4'
+  common: true
+- state: '-2'
+  common: false
+ionization_energy: '9.009'
+ionization_energy_ev: 9.009
+electron_configuration: '[Kr] 4d^{10}5s^{2}5p^{4}'
+electron_configuration_formatted: '[Kr]4d¹⁰5s²5p⁴'
+electron_configuration_html: '[Kr]4d<sup>10</sup>5s<sup>2</sup>5p<sup>4</sup>'
+atomic_radius: '2.06'
+atomic_radius_angstrom: 2.06
+electron_affinity: '1.971'
+electron_affinity_ev: 1.971
+rsc_url: https://www.rsc.org/periodic-table/element/52/tellurium

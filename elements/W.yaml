@@ -1,0 +1,42 @@
+atomic_number: 74
+symbol: W
+name: Tungsten
+category: TransMetal
+category_label: Transitional Metal
+period: 6
+group: 6
+group_label: 6 VIB
+block: d
+grid_row: 6
+grid_col: 6
+phase: solid
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '183.84'
+atomic_mass_value: 183.84
+atomic_mass_most_stable_isotope: false
+oxidation_states: '*6* 5 4 3 2 0'
+oxidation_states_parsed:
+- state: '6'
+  common: true
+- state: '5'
+  common: false
+- state: '4'
+  common: false
+- state: '3'
+  common: false
+- state: '2'
+  common: false
+- state: '0'
+  common: false
+ionization_energy: '7.864'
+ionization_energy_ev: 7.864
+electron_configuration: '[Xe] 4f^{14}5d^{4}6s^{2}'
+electron_configuration_formatted: '[Xe]4f¹⁴5d⁴6s²'
+electron_configuration_html: '[Xe]4f<sup>14</sup>5d<sup>4</sup>6s<sup>2</sup>'
+atomic_radius: '2.18'
+atomic_radius_angstrom: 2.18
+electron_affinity: '0.8162'
+electron_affinity_ev: 0.8162
+rsc_url: https://www.rsc.org/periodic-table/element/74/tungsten

@@ -1,0 +1,32 @@
+atomic_number: 55
+symbol: Cs
+name: Caesium
+category: AlkaliMetal
+category_label: Alkali Metal
+period: 6
+group: 1
+group_label: 1 IA
+block: s
+grid_row: 6
+grid_col: 1
+phase: solid
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '132.905'
+atomic_mass_value: 132.905
+atomic_mass_most_stable_isotope: false
+oxidation_states: '*1*'
+oxidation_states_parsed:
+- state: '1'
+  common: true
+ionization_energy: '3.894'
+ionization_energy_ev: 3.894
+electron_configuration: '[Xe] 6s^{1}'
+electron_configuration_formatted: '[Xe]6s¹'
+electron_configuration_html: '[Xe]6s<sup>1</sup>'
+atomic_radius: '3.43'
+atomic_radius_angstrom: 3.43
+electron_affinity: '0.4716'
+electron_affinity_ev: 0.4716
+rsc_url: https://www.rsc.org/periodic-table/element/55/caesium

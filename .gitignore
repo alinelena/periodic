@@ -1,0 +1,11 @@
+_site/
+_includes/
+.quarto/
+__pycache__/
+*.pyc
+.pytest_cache/
+periodic-table.pdf
+periodic-table-a4.pdf
+periodic-table.svg
+periodic.pdf
+periodic.typ

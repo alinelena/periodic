@@ -1,0 +1,36 @@
+atomic_number: 33
+symbol: As
+name: Arsenic
+category: Metalloid
+category_label: Metalloid
+period: 4
+group: 15
+group_label: 15 VA
+block: p
+grid_row: 4
+grid_col: 15
+phase: solid
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '74.922'
+atomic_mass_value: 74.922
+atomic_mass_most_stable_isotope: false
+oxidation_states: 5 *3* -3
+oxidation_states_parsed:
+- state: '5'
+  common: false
+- state: '3'
+  common: true
+- state: '-3'
+  common: false
+ionization_energy: '9.788'
+ionization_energy_ev: 9.788
+electron_configuration: '[Ar] 3d^{10}4s^{2}4p^{3}'
+electron_configuration_formatted: '[Ar]3d¹⁰4s²4p³'
+electron_configuration_html: '[Ar]3d<sup>10</sup>4s<sup>2</sup>4p<sup>3</sup>'
+atomic_radius: '1.85'
+atomic_radius_angstrom: 1.85
+electron_affinity: '0.804'
+electron_affinity_ev: 0.804
+rsc_url: https://www.rsc.org/periodic-table/element/33/arsenic

@@ -1,0 +1,36 @@
+atomic_number: 34
+symbol: Se
+name: Selenium
+category: Nonmetal
+category_label: Non metal
+period: 4
+group: 16
+group_label: 16 VIA
+block: p
+grid_row: 4
+grid_col: 16
+phase: solid
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '78.971'
+atomic_mass_value: 78.971
+atomic_mass_most_stable_isotope: false
+oxidation_states: 6 *4* -2
+oxidation_states_parsed:
+- state: '6'
+  common: false
+- state: '4'
+  common: true
+- state: '-2'
+  common: false
+ionization_energy: '9.752'
+ionization_energy_ev: 9.752
+electron_configuration: '[Ar] 3d^{10}4s^{2}4p^{4}'
+electron_configuration_formatted: '[Ar]3d¹⁰4s²4p⁴'
+electron_configuration_html: '[Ar]3d<sup>10</sup>4s<sup>2</sup>4p<sup>4</sup>'
+atomic_radius: '1.9'
+atomic_radius_angstrom: 1.9
+electron_affinity: '2.021'
+electron_affinity_ev: 2.021
+rsc_url: https://www.rsc.org/periodic-table/element/34/selenium

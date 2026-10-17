@@ -1,0 +1,32 @@
+atomic_number: 31
+symbol: Ga
+name: Gallium
+category: Metal
+category_label: Post Trans Metal
+period: 4
+group: 13
+group_label: 13 IIIA
+block: p
+grid_row: 4
+grid_col: 13
+phase: solid
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '69.723'
+atomic_mass_value: 69.723
+atomic_mass_most_stable_isotope: false
+oxidation_states: '*3*'
+oxidation_states_parsed:
+- state: '3'
+  common: true
+ionization_energy: '5.999'
+ionization_energy_ev: 5.999
+electron_configuration: '[Ar] 3d^{10}4s^{2}4p^{1}'
+electron_configuration_formatted: '[Ar]3d¹⁰4s²4p¹'
+electron_configuration_html: '[Ar]3d<sup>10</sup>4s<sup>2</sup>4p<sup>1</sup>'
+atomic_radius: '1.87'
+atomic_radius_angstrom: 1.87
+electron_affinity: '0.43'
+electron_affinity_ev: 0.43
+rsc_url: https://www.rsc.org/periodic-table/element/31/gallium

@@ -1,0 +1,36 @@
+atomic_number: 28
+symbol: Ni
+name: Nickel
+category: TransMetal
+category_label: Transitional Metal
+period: 4
+group: 10
+group_label: 10 VIIIB
+block: d
+grid_row: 4
+grid_col: 10
+phase: solid
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '58.693'
+atomic_mass_value: 58.693
+atomic_mass_most_stable_isotope: false
+oxidation_states: 3 *2* 0
+oxidation_states_parsed:
+- state: '3'
+  common: false
+- state: '2'
+  common: true
+- state: '0'
+  common: false
+ionization_energy: '7.64'
+ionization_energy_ev: 7.64
+electron_configuration: '[Ar] 3d^{8}4s^{2}'
+electron_configuration_formatted: '[Ar]3d⁸4s²'
+electron_configuration_html: '[Ar]3d<sup>8</sup>4s<sup>2</sup>'
+atomic_radius: '1.97'
+atomic_radius_angstrom: 1.97
+electron_affinity: '1.156'
+electron_affinity_ev: 1.156
+rsc_url: https://www.rsc.org/periodic-table/element/28/nickel

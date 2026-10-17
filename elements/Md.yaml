@@ -1,0 +1,32 @@
+atomic_number: 101
+symbol: Md
+name: Mendelevium
+category: Actinide
+category_label: Actinide
+period: 7
+group: null
+group_label: Actinide
+block: f
+grid_row: 10
+grid_col: 16
+phase: solid
+lab_made: true
+radioactive_marker: false
+is_radioactive: true
+atomic_mass: '[258]'
+atomic_mass_value: 258.0
+atomic_mass_most_stable_isotope: true
+oxidation_states: '*3*'
+oxidation_states_parsed:
+- state: '3'
+  common: true
+ionization_energy: '6.58'
+ionization_energy_ev: 6.58
+electron_configuration: '[Rn] 5f^{13}7s^{2}'
+electron_configuration_formatted: '[Rn]5f¹³7s²'
+electron_configuration_html: '[Rn]5f<sup>13</sup>7s<sup>2</sup>'
+atomic_radius: '2.46'
+atomic_radius_angstrom: 2.46
+electron_affinity: U
+electron_affinity_ev: null
+rsc_url: https://www.rsc.org/periodic-table/element/101/mendelevium

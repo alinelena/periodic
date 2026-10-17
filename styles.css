@@ -1,0 +1,470 @@
+/* Periodic Table Website Styles (Bootstrap 5 + Typst CeTZ Theme) */
+
+:root {
+  --pt-text-dark: #231f20;
+  --pt-card-radius: 10px;
+}
+
+body {
+  font-family: "Noto Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background-color: #f8f9fa;
+}
+
+/* Make Quarto full-width container use maximum horizontal space */
+.page-columns,
+.quarto-container,
+main.content {
+  max-width: 100% !important;
+}
+
+#quarto-content > * {
+  padding-top: 0.25rem;
+}
+
+.pt-top-panel {
+  background: #ffffff;
+}
+
+/* Scroll wrapper for the 18-column periodic table */
+.pt-scroll-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+/* 19 columns: Col 1 = Period header, Cols 2..19 = Groups 1..18 */
+.pt-grid {
+  display: grid;
+  grid-template-columns: 36px repeat(18, minmax(84px, 1fr));
+  grid-template-rows: 34px repeat(7, auto) 14px repeat(2, auto);
+  gap: 5px;
+  min-width: 1580px;
+  align-items: stretch;
+}
+
+/* Compact mode allows tighter grid */
+.pt-grid.pt-compact-mode {
+  grid-template-columns: 32px repeat(18, minmax(60px, 1fr));
+  min-width: 1140px;
+}
+
+/* Axis corner & Group / Period headers */
+.pt-axis-corner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: #6c757d;
+  line-height: 1.1;
+  user-select: none;
+}
+
+.pt-group-hdr,
+.pt-period-hdr,
+.pt-fblock-hdr {
+  border: 1px solid transparent;
+  background: #e9ecef;
+  color: #343a40;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 2px 4px;
+  transition: all 0.15s ease;
+}
+
+.pt-group-hdr:hover,
+.pt-period-hdr:hover,
+.pt-fblock-hdr:hover,
+.pt-group-hdr.active,
+.pt-period-hdr.active {
+  background: #212529;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.pt-group-roman {
+  font-size: 0.68rem;
+  opacity: 0.8;
+}
+
+.pt-period-hdr {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.pt-fblock-hdr {
+  justify-content: flex-end;
+  padding-right: 12px;
+  font-size: 0.82rem;
+}
+
+/* Element Card matching periodic-table.typ */
+.pt-cell {
+  border: 2.2px solid var(--cat-stroke, #00739e);
+  background-color: var(--cat-fill, #eaf3f9);
+  color: var(--pt-text-dark);
+  border-radius: var(--pt-card-radius);
+  padding: 4px 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.14s ease, box-shadow 0.14s ease, opacity 0.18s ease, filter 0.18s ease;
+  line-height: 1.15;
+  min-height: 96px;
+}
+
+.pt-cell:hover,
+.pt-cell:focus-visible {
+  transform: scale(1.07);
+  z-index: 15;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+  outline: none;
+}
+
+.pt-placeholder {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.pt-placeholder .pt-row-top {
+  width: 100%;
+}
+
+/* Top & middle data rows inside element card */
+.pt-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 2px;
+  font-size: 0.64rem;
+  width: 100%;
+}
+
+.pt-z {
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 1px;
+  white-space: nowrap;
+}
+
+.pt-phase-icon,
+.pt-marker-icon {
+  font-size: 0.62rem;
+  line-height: 1;
+}
+
+.pt-ox {
+  font-size: 0.58rem;
+  text-align: right;
+  letter-spacing: -0.02em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 66%;
+}
+
+.pt-mass,
+.pt-ion,
+.pt-rad,
+.pt-aff {
+  font-weight: 600;
+  font-size: 0.62rem;
+}
+
+.pt-sym {
+  font-size: 1.25rem;
+  font-weight: 800;
+  text-align: center;
+  line-height: 1.05;
+  margin: 1px 0;
+}
+
+.pt-name {
+  font-size: 0.66rem;
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pt-conf {
+  font-size: 0.58rem;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #343a40;
+}
+
+.pt-conf sup {
+  font-size: 0.72em;
+}
+
+.pt-heatmap-val {
+  display: none;
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 4px;
+  margin-top: 2px;
+  padding: 0 3px;
+}
+
+.pt-grid[data-color-mode="atomic_radius_angstrom"] .pt-heatmap-val,
+.pt-grid[data-color-mode="ionization_energy_ev"] .pt-heatmap-val,
+.pt-grid[data-color-mode="electron_affinity_ev"] .pt-heatmap-val,
+.pt-grid[data-color-mode="atomic_mass_value"] .pt-heatmap-val,
+.pt-grid[data-color-mode="block"] .pt-heatmap-val {
+  display: block;
+}
+
+/* Compact mode hides secondary rows for a clean compact view */
+.pt-grid.pt-compact-mode .pt-cell {
+  min-height: 62px;
+  padding: 3px 4px;
+}
+
+.pt-grid.pt-compact-mode .pt-ox,
+.pt-grid.pt-compact-mode .pt-row-mid1,
+.pt-grid.pt-compact-mode .pt-row-mid2,
+.pt-grid.pt-compact-mode .pt-conf {
+  display: none;
+}
+
+/* Dimmed / Matched filter states */
+.pt-cell.pt-dimmed {
+  opacity: 0.2;
+  filter: grayscale(65%);
+}
+
+.pt-cell.pt-matched {
+  box-shadow: 0 0 0 2px var(--cat-stroke), 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* Highlight specific property when hovering sample callout labels */
+.pt-grid[data-highlight-prop] .pt-z,
+.pt-grid[data-highlight-prop] .pt-ox,
+.pt-grid[data-highlight-prop] .pt-mass,
+.pt-grid[data-highlight-prop] .pt-ion,
+.pt-grid[data-highlight-prop] .pt-rad,
+.pt-grid[data-highlight-prop] .pt-aff,
+.pt-grid[data-highlight-prop] .pt-sym,
+.pt-grid[data-highlight-prop] .pt-name,
+.pt-grid[data-highlight-prop] .pt-conf {
+  opacity: 0.22;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.pt-grid[data-highlight-prop="z"] .pt-z,
+.pt-grid[data-highlight-prop="ox"] .pt-ox,
+.pt-grid[data-highlight-prop="mass"] .pt-mass,
+.pt-grid[data-highlight-prop="ion"] .pt-ion,
+.pt-grid[data-highlight-prop="rad"] .pt-rad,
+.pt-grid[data-highlight-prop="aff"] .pt-aff,
+.pt-grid[data-highlight-prop="sym"] .pt-sym,
+.pt-grid[data-highlight-prop="name"] .pt-name,
+.pt-grid[data-highlight-prop="conf"] .pt-conf {
+  opacity: 1 !important;
+  background-color: #fff3cd;
+  border-radius: 3px;
+  padding: 0 2px;
+  font-weight: 800;
+}
+
+/* Enlarged Sample Element Card in top legend */
+.pt-sample-elem {
+  width: 148px;
+  min-width: 148px;
+  min-height: 142px;
+  padding: 7px 9px;
+  border-width: 3px;
+  border-radius: 14px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.pt-sample-elem .pt-row {
+  font-size: 0.78rem;
+}
+
+.pt-sample-elem .pt-ox,
+.pt-sample-elem .pt-mass,
+.pt-sample-elem .pt-ion,
+.pt-sample-elem .pt-rad,
+.pt-sample-elem .pt-aff {
+  font-size: 0.75rem;
+}
+
+.pt-sample-elem .pt-sym {
+  font-size: 1.75rem;
+  margin: 2px 0;
+}
+
+.pt-sample-elem .pt-name {
+  font-size: 0.85rem;
+}
+
+.pt-sample-elem .pt-conf {
+  font-size: 0.75rem;
+}
+
+/* Modal Preview Element Card */
+.pt-modal-elem {
+  width: 175px;
+  min-height: 168px;
+  padding: 9px 11px;
+  border-width: 3px;
+  border-radius: 14px;
+  cursor: default;
+}
+
+.pt-modal-elem:hover {
+  transform: none;
+}
+
+.pt-modal-elem .pt-row,
+.pt-modal-elem .pt-ox,
+.pt-modal-elem .pt-mass,
+.pt-modal-elem .pt-ion,
+.pt-modal-elem .pt-rad,
+.pt-modal-elem .pt-aff {
+  font-size: 0.84rem;
+}
+
+.pt-modal-elem .pt-sym {
+  font-size: 2.1rem;
+}
+
+.pt-modal-elem .pt-name {
+  font-size: 0.95rem;
+}
+
+.pt-modal-elem .pt-conf {
+  font-size: 0.82rem;
+}
+
+/* Callout labels next to Sample Card */
+.pt-callout-left,
+.pt-callout-right {
+  font-size: 0.74rem;
+  line-height: 1.32;
+}
+
+.pt-callout-item {
+  padding: 1px 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.12s ease;
+  white-space: nowrap;
+}
+
+.pt-callout-item:hover {
+  background-color: #fff3cd;
+}
+
+.pt-callout-sym {
+  font-size: 1.05rem;
+  line-height: 1.25;
+}
+
+.pt-callout-spacer {
+  height: 54px;
+}
+
+/* Category Legend Boxes */
+.pt-cat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(132px, 1fr));
+  gap: 5px;
+}
+
+.pt-cat-box {
+  border: 2px solid var(--cat-stroke);
+  background-color: var(--cat-fill);
+  color: var(--pt-text-dark);
+  border-radius: 8px;
+  padding: 4px 8px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+  text-align: left;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.pt-cat-box:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+.pt-cat-box.active {
+  box-shadow: 0 0 0 2.5px #212529;
+  transform: translateY(-1px);
+}
+
+.pt-cat-count {
+  background: rgba(255, 255, 255, 0.85);
+  color: #212529;
+  font-size: 0.66rem;
+}
+
+/* State & Property Buttons */
+.pt-state-btn {
+  border: 1px solid #dee2e6;
+  background: #ffffff;
+  color: #212529;
+  font-size: 0.76rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pt-state-btn:hover,
+.pt-state-btn.active {
+  background: #212529;
+  color: #ffffff;
+  border-color: #212529;
+}
+
+/* Continuous Heatmap Gradient Bar */
+.pt-gradient-bar {
+  width: 220px;
+  height: 14px;
+  border-radius: 7px;
+  border: 1px solid #adb5bd;
+  background: linear-gradient(90deg, #e0f2fe 0%, #7dd3fc 25%, #5eead4 50%, #fde047 75%, #fb7185 100%);
+}
+
+/* Trend Chart Tooltip */
+.pt-chart-tooltip {
+  position: absolute;
+  pointer-events: none;
+  background: rgba(33, 37, 41, 0.94);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  z-index: 30;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-xs {
+  padding: 0.15rem 0.45rem;
+  font-size: 0.74rem;
+  border-radius: 0.25rem;
+}

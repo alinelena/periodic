@@ -1,0 +1,34 @@
+atomic_number: 1
+symbol: H
+name: Hydrogen
+category: Nonmetal
+category_label: Non metal
+period: 1
+group: 1
+group_label: 1 IA
+block: s
+grid_row: 1
+grid_col: 1
+phase: gas
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '1.008'
+atomic_mass_value: 1.008
+atomic_mass_most_stable_isotope: false
+oxidation_states: '*1* -1'
+oxidation_states_parsed:
+- state: '1'
+  common: true
+- state: '-1'
+  common: false
+ionization_energy: '13.6'
+ionization_energy_ev: 13.6
+electron_configuration: 1s^{1}
+electron_configuration_formatted: 1s¹
+electron_configuration_html: 1s<sup>1</sup>
+atomic_radius: '1.1'
+atomic_radius_angstrom: 1.1
+electron_affinity: '0.7542'
+electron_affinity_ev: 0.7542
+rsc_url: https://www.rsc.org/periodic-table/element/1/hydrogen

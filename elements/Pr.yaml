@@ -1,0 +1,34 @@
+atomic_number: 59
+symbol: Pr
+name: Praseodymium
+category: Lanthanide
+category_label: Lanthanide
+period: 6
+group: null
+group_label: Lanthanide
+block: f
+grid_row: 9
+grid_col: 6
+phase: solid
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '140.908'
+atomic_mass_value: 140.908
+atomic_mass_most_stable_isotope: false
+oxidation_states: 4 *3*
+oxidation_states_parsed:
+- state: '4'
+  common: false
+- state: '3'
+  common: true
+ionization_energy: '5.473'
+ionization_energy_ev: 5.473
+electron_configuration: '[Xe] 4f^{3}6s^{2}'
+electron_configuration_formatted: '[Xe]4f³6s²'
+electron_configuration_html: '[Xe]4f<sup>3</sup>6s<sup>2</sup>'
+atomic_radius: '2.4'
+atomic_radius_angstrom: 2.4
+electron_affinity: '0.962'
+electron_affinity_ev: 0.962
+rsc_url: https://www.rsc.org/periodic-table/element/59/praseodymium

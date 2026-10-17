@@ -1,0 +1,40 @@
+atomic_number: 17
+symbol: Cl
+name: Chlorine
+category: Halogen
+category_label: Halogen
+period: 3
+group: 17
+group_label: 17 VIIA
+block: p
+grid_row: 3
+grid_col: 17
+phase: gas
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '35.45'
+atomic_mass_value: 35.45
+atomic_mass_most_stable_isotope: false
+oxidation_states: 7 5 3 1 *-1*
+oxidation_states_parsed:
+- state: '7'
+  common: false
+- state: '5'
+  common: false
+- state: '3'
+  common: false
+- state: '1'
+  common: false
+- state: '-1'
+  common: true
+ionization_energy: '12.97'
+ionization_energy_ev: 12.97
+electron_configuration: '[Ne] 3s^{2}3p^{5}'
+electron_configuration_formatted: '[Ne]3s²3p⁵'
+electron_configuration_html: '[Ne]3s<sup>2</sup>3p<sup>5</sup>'
+atomic_radius: '1.75'
+atomic_radius_angstrom: 1.75
+electron_affinity: '3.613'
+electron_affinity_ev: 3.613
+rsc_url: https://www.rsc.org/periodic-table/element/17/chlorine

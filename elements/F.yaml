@@ -1,0 +1,32 @@
+atomic_number: 9
+symbol: F
+name: Fluorine
+category: Halogen
+category_label: Halogen
+period: 2
+group: 17
+group_label: 17 VIIA
+block: p
+grid_row: 2
+grid_col: 17
+phase: gas
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '18.998'
+atomic_mass_value: 18.998
+atomic_mass_most_stable_isotope: false
+oxidation_states: '*-1*'
+oxidation_states_parsed:
+- state: '-1'
+  common: true
+ionization_energy: '17.42'
+ionization_energy_ev: 17.42
+electron_configuration: '[He] 2s^{2}2p^{5}'
+electron_configuration_formatted: '[He]2s²2p⁵'
+electron_configuration_html: '[He]2s<sup>2</sup>2p<sup>5</sup>'
+atomic_radius: '1.47'
+atomic_radius_angstrom: 1.47
+electron_affinity: '3.401'
+electron_affinity_ev: 3.401
+rsc_url: https://www.rsc.org/periodic-table/element/9/fluorine

@@ -1,0 +1,32 @@
+atomic_number: 100
+symbol: Fm
+name: Fermium
+category: Actinide
+category_label: Actinide
+period: 7
+group: null
+group_label: Actinide
+block: f
+grid_row: 10
+grid_col: 15
+phase: solid
+lab_made: true
+radioactive_marker: false
+is_radioactive: true
+atomic_mass: '[257]'
+atomic_mass_value: 257.0
+atomic_mass_most_stable_isotope: true
+oxidation_states: '*3*'
+oxidation_states_parsed:
+- state: '3'
+  common: true
+ionization_energy: '6.5'
+ionization_energy_ev: 6.5
+electron_configuration: '[Rn] 5f^{12}7s^{2}'
+electron_configuration_formatted: '[Rn]5f¹²7s²'
+electron_configuration_html: '[Rn]5f<sup>12</sup>7s<sup>2</sup>'
+atomic_radius: '2.45'
+atomic_radius_angstrom: 2.45
+electron_affinity: U
+electron_affinity_ev: null
+rsc_url: https://www.rsc.org/periodic-table/element/100/fermium

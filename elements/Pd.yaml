@@ -1,0 +1,36 @@
+atomic_number: 46
+symbol: Pd
+name: Palladium
+category: TransMetal
+category_label: Transitional Metal
+period: 5
+group: 10
+group_label: 10 VIIIB
+block: d
+grid_row: 5
+grid_col: 10
+phase: solid
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '106.42'
+atomic_mass_value: 106.42
+atomic_mass_most_stable_isotope: false
+oxidation_states: 4 *2* 0
+oxidation_states_parsed:
+- state: '4'
+  common: false
+- state: '2'
+  common: true
+- state: '0'
+  common: false
+ionization_energy: '8.337'
+ionization_energy_ev: 8.337
+electron_configuration: '[Kr] 4d^{10}'
+electron_configuration_formatted: '[Kr]4d¹⁰'
+electron_configuration_html: '[Kr]4d<sup>10</sup>'
+atomic_radius: '2.1'
+atomic_radius_angstrom: 2.1
+electron_affinity: '0.562'
+electron_affinity_ev: 0.562
+rsc_url: https://www.rsc.org/periodic-table/element/46/palladium

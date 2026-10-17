@@ -1,0 +1,32 @@
+atomic_number: 61
+symbol: Pm
+name: Promethium
+category: Lanthanide
+category_label: Lanthanide
+period: 6
+group: null
+group_label: Lanthanide
+block: f
+grid_row: 9
+grid_col: 8
+phase: solid
+lab_made: false
+radioactive_marker: false
+is_radioactive: true
+atomic_mass: '[145]'
+atomic_mass_value: 145.0
+atomic_mass_most_stable_isotope: true
+oxidation_states: '*3*'
+oxidation_states_parsed:
+- state: '3'
+  common: true
+ionization_energy: '5.582'
+ionization_energy_ev: 5.582
+electron_configuration: '[Xe] 4f^{5}6s^{2}'
+electron_configuration_formatted: '[Xe]4f⁵6s²'
+electron_configuration_html: '[Xe]4f<sup>5</sup>6s<sup>2</sup>'
+atomic_radius: '2.38'
+atomic_radius_angstrom: 2.38
+electron_affinity: U
+electron_affinity_ev: null
+rsc_url: https://www.rsc.org/periodic-table/element/61/promethium

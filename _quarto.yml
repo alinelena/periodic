@@ -1,0 +1,58 @@
+project:
+  type: website
+  output-dir: _site
+  pre-render:
+    - python3 scripts/build_site.py
+  render:
+    - index.qmd
+  resources:
+    - elements/*.yaml
+    - periodic-table.pdf
+    - periodic-table-a4.pdf
+    - periodic-table.svg
+    - assets/periodic.js
+
+website:
+  title: "Periodic Table of Elements"
+  site-url: "https://periodic.elena.re"
+  navbar:
+    background: dark
+    search: false
+    left:
+      - text: "Interactive Table"
+        href: index.qmd
+      - text: "PDF (Poster)"
+        href: periodic-table.pdf
+        target: _blank
+      - text: "PDF (A4)"
+        href: periodic-table-a4.pdf
+        target: _blank
+      - text: "SVG"
+        href: periodic-table.svg
+        target: _blank
+      - text: "YAML Schema"
+        href: elements/categories.yaml
+        target: _blank
+    right:
+      - text: "RSC Periodic Table"
+        href: https://www.rsc.org/periodic-table
+        target: _blank
+      - icon: github
+        href: https://github.com/alinelena/periodic
+        target: _blank
+        aria-label: GitHub Repository
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    page-layout: custom
+    toc: false
+    include-in-header:
+      - text: |
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    include-after-body:
+      - text: |
+          <script src="assets/periodic.js"></script>

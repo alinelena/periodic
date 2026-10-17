@@ -1,0 +1,48 @@
+atomic_number: 6
+symbol: C
+name: Carbon
+category: Nonmetal
+category_label: Non metal
+period: 2
+group: 14
+group_label: 14 IVA
+block: p
+grid_row: 2
+grid_col: 14
+phase: solid
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '12.011'
+atomic_mass_value: 12.011
+atomic_mass_most_stable_isotope: false
+oxidation_states: 4 3 2 1 0 -1 -2 -3 *-4*
+oxidation_states_parsed:
+- state: '4'
+  common: false
+- state: '3'
+  common: false
+- state: '2'
+  common: false
+- state: '1'
+  common: false
+- state: '0'
+  common: false
+- state: '-1'
+  common: false
+- state: '-2'
+  common: false
+- state: '-3'
+  common: false
+- state: '-4'
+  common: true
+ionization_energy: '11.26'
+ionization_energy_ev: 11.26
+electron_configuration: '[He] 2s^{2}2p^{2}'
+electron_configuration_formatted: '[He]2s²2p²'
+electron_configuration_html: '[He]2s<sup>2</sup>2p<sup>2</sup>'
+atomic_radius: '1.7'
+atomic_radius_angstrom: 1.7
+electron_affinity: '1.262'
+electron_affinity_ev: 1.262
+rsc_url: https://www.rsc.org/periodic-table/element/6/carbon

@@ -1,0 +1,32 @@
+atomic_number: 40
+symbol: Zr
+name: Zirconium
+category: TransMetal
+category_label: Transitional Metal
+period: 5
+group: 4
+group_label: 4 IVB
+block: d
+grid_row: 5
+grid_col: 4
+phase: solid
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '91.224'
+atomic_mass_value: 91.224
+atomic_mass_most_stable_isotope: false
+oxidation_states: '*4*'
+oxidation_states_parsed:
+- state: '4'
+  common: true
+ionization_energy: '6.634'
+ionization_energy_ev: 6.634
+electron_configuration: '[Kr] 4d^{2}5s^{2}'
+electron_configuration_formatted: '[Kr]4d²5s²'
+electron_configuration_html: '[Kr]4d<sup>2</sup>5s<sup>2</sup>'
+atomic_radius: '2.23'
+atomic_radius_angstrom: 2.23
+electron_affinity: '0.426'
+electron_affinity_ev: 0.426
+rsc_url: https://www.rsc.org/periodic-table/element/40/zirconium

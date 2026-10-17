@@ -1,0 +1,40 @@
+atomic_number: 26
+symbol: Fe
+name: Iron
+category: TransMetal
+category_label: Transitional Metal
+period: 4
+group: 8
+group_label: 8 VIIIB
+block: d
+grid_row: 4
+grid_col: 8
+phase: solid
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '55.845'
+atomic_mass_value: 55.845
+atomic_mass_most_stable_isotope: false
+oxidation_states: 6 *3* 2 0 -2
+oxidation_states_parsed:
+- state: '6'
+  common: false
+- state: '3'
+  common: true
+- state: '2'
+  common: false
+- state: '0'
+  common: false
+- state: '-2'
+  common: false
+ionization_energy: '7.902'
+ionization_energy_ev: 7.902
+electron_configuration: '[Ar] 3d^{6}4s^{2}'
+electron_configuration_formatted: '[Ar]3d⁶4s²'
+electron_configuration_html: '[Ar]3d<sup>6</sup>4s<sup>2</sup>'
+atomic_radius: '2.04'
+atomic_radius_angstrom: 2.04
+electron_affinity: '0.151'
+electron_affinity_ev: 0.151
+rsc_url: https://www.rsc.org/periodic-table/element/26/iron

@@ -1,0 +1,9 @@
+---
+title: "Periodic Table of Elements"
+pagetitle: "Periodic Table of Elements — periodic.elena.re"
+title-block-style: none
+format:
+  html:
+    include-before-body:
+      - file: _includes/periodic-app.html
+---

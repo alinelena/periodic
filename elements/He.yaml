@@ -1,0 +1,32 @@
+atomic_number: 2
+symbol: He
+name: Helium
+category: NobleGas
+category_label: Noble gas
+period: 1
+group: 18
+group_label: 18 VIIIA
+block: s
+grid_row: 1
+grid_col: 18
+phase: gas
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '4.003'
+atomic_mass_value: 4.003
+atomic_mass_most_stable_isotope: false
+oxidation_states: '*0*'
+oxidation_states_parsed:
+- state: '0'
+  common: true
+ionization_energy: '24.59'
+ionization_energy_ev: 24.59
+electron_configuration: 1s^{2}
+electron_configuration_formatted: 1s²
+electron_configuration_html: 1s<sup>2</sup>
+atomic_radius: '1.4'
+atomic_radius_angstrom: 1.4
+electron_affinity: Ns
+electron_affinity_ev: null
+rsc_url: https://www.rsc.org/periodic-table/element/2/helium

@@ -1,0 +1,32 @@
+atomic_number: 20
+symbol: Ca
+name: Calcium
+category: AlkalineEarthMetal
+category_label: Alkaline Earth Metal
+period: 4
+group: 2
+group_label: 2 IIA
+block: s
+grid_row: 4
+grid_col: 2
+phase: solid
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '40.078'
+atomic_mass_value: 40.078
+atomic_mass_most_stable_isotope: false
+oxidation_states: '*2*'
+oxidation_states_parsed:
+- state: '2'
+  common: true
+ionization_energy: '6.113'
+ionization_energy_ev: 6.113
+electron_configuration: '[Ar] 4s^{2}'
+electron_configuration_formatted: '[Ar]4s²'
+electron_configuration_html: '[Ar]4s<sup>2</sup>'
+atomic_radius: '2.31'
+atomic_radius_angstrom: 2.31
+electron_affinity: '0.02455'
+electron_affinity_ev: 0.02455
+rsc_url: https://www.rsc.org/periodic-table/element/20/calcium

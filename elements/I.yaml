@@ -1,0 +1,38 @@
+atomic_number: 53
+symbol: I
+name: Iodine
+category: Halogen
+category_label: Halogen
+period: 5
+group: 17
+group_label: 17 VIIA
+block: p
+grid_row: 5
+grid_col: 17
+phase: solid
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '126.904'
+atomic_mass_value: 126.904
+atomic_mass_most_stable_isotope: false
+oxidation_states: 7 5 1 *-1*
+oxidation_states_parsed:
+- state: '7'
+  common: false
+- state: '5'
+  common: false
+- state: '1'
+  common: false
+- state: '-1'
+  common: true
+ionization_energy: '10.45'
+ionization_energy_ev: 10.45
+electron_configuration: '[Kr] 4d^{10}5s^{2}5p^{5}'
+electron_configuration_formatted: '[Kr]4d¹⁰5s²5p⁵'
+electron_configuration_html: '[Kr]4d<sup>10</sup>5s<sup>2</sup>5p<sup>5</sup>'
+atomic_radius: '1.98'
+atomic_radius_angstrom: 1.98
+electron_affinity: '3.059'
+electron_affinity_ev: 3.059
+rsc_url: https://www.rsc.org/periodic-table/element/53/iodine

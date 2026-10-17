@@ -1,0 +1,44 @@
+atomic_number: 76
+symbol: Os
+name: Osmium
+category: TransMetal
+category_label: Transitional Metal
+period: 6
+group: 8
+group_label: 8 VIIIB
+block: d
+grid_row: 6
+grid_col: 8
+phase: solid
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '190.23'
+atomic_mass_value: 190.23
+atomic_mass_most_stable_isotope: false
+oxidation_states: 8 6 *4* 3 2 0 -2
+oxidation_states_parsed:
+- state: '8'
+  common: false
+- state: '6'
+  common: false
+- state: '4'
+  common: true
+- state: '3'
+  common: false
+- state: '2'
+  common: false
+- state: '0'
+  common: false
+- state: '-2'
+  common: false
+ionization_energy: '8.438'
+ionization_energy_ev: 8.438
+electron_configuration: '[Xe] 4f^{14}5d^{6}6s^{2}'
+electron_configuration_formatted: '[Xe]4f¹⁴5d⁶6s²'
+electron_configuration_html: '[Xe]4f<sup>14</sup>5d<sup>6</sup>6s<sup>2</sup>'
+atomic_radius: '2.16'
+atomic_radius_angstrom: 2.16
+electron_affinity: '1.1'
+electron_affinity_ev: 1.1
+rsc_url: https://www.rsc.org/periodic-table/element/76/osmium

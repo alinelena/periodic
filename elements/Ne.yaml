@@ -1,0 +1,32 @@
+atomic_number: 10
+symbol: Ne
+name: Neon
+category: NobleGas
+category_label: Noble gas
+period: 2
+group: 18
+group_label: 18 VIIIA
+block: p
+grid_row: 2
+grid_col: 18
+phase: gas
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '20.180'
+atomic_mass_value: 20.18
+atomic_mass_most_stable_isotope: false
+oxidation_states: '*0*'
+oxidation_states_parsed:
+- state: '0'
+  common: true
+ionization_energy: '21.56'
+ionization_energy_ev: 21.56
+electron_configuration: '[He] 2s^{2}2p^{6}'
+electron_configuration_formatted: '[He]2s²2p⁶'
+electron_configuration_html: '[He]2s<sup>2</sup>2p<sup>6</sup>'
+atomic_radius: '1.54'
+atomic_radius_angstrom: 1.54
+electron_affinity: Ns
+electron_affinity_ev: null
+rsc_url: https://www.rsc.org/periodic-table/element/10/neon

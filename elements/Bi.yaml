@@ -1,0 +1,34 @@
+atomic_number: 83
+symbol: Bi
+name: Bismuth
+category: Metal
+category_label: Post Trans Metal
+period: 6
+group: 15
+group_label: 15 VA
+block: p
+grid_row: 6
+grid_col: 15
+phase: solid
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '208.980'
+atomic_mass_value: 208.98
+atomic_mass_most_stable_isotope: false
+oxidation_states: 5 *3*
+oxidation_states_parsed:
+- state: '5'
+  common: false
+- state: '3'
+  common: true
+ionization_energy: '7.285'
+ionization_energy_ev: 7.285
+electron_configuration: '[Xe] 4f^{14}5d^{10}6s^{2}6p^{3}'
+electron_configuration_formatted: '[Xe]4f¹⁴5d¹⁰6s²6p³'
+electron_configuration_html: '[Xe]4f<sup>14</sup>5d<sup>10</sup>6s<sup>2</sup>6p<sup>3</sup>'
+atomic_radius: '2.07'
+atomic_radius_angstrom: 2.07
+electron_affinity: '0.9423'
+electron_affinity_ev: 0.9423
+rsc_url: https://www.rsc.org/periodic-table/element/83/bismuth

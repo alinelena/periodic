@@ -1,0 +1,32 @@
+atomic_number: 38
+symbol: Sr
+name: Strontium
+category: AlkalineEarthMetal
+category_label: Alkaline Earth Metal
+period: 5
+group: 2
+group_label: 2 IIA
+block: s
+grid_row: 5
+grid_col: 2
+phase: solid
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '87.62'
+atomic_mass_value: 87.62
+atomic_mass_most_stable_isotope: false
+oxidation_states: '*2*'
+oxidation_states_parsed:
+- state: '2'
+  common: true
+ionization_energy: '5.695'
+ionization_energy_ev: 5.695
+electron_configuration: '[Kr] 5s^{2}'
+electron_configuration_formatted: '[Kr]5s²'
+electron_configuration_html: '[Kr]5s<sup>2</sup>'
+atomic_radius: '2.49'
+atomic_radius_angstrom: 2.49
+electron_affinity: '0.048'
+electron_affinity_ev: 0.048
+rsc_url: https://www.rsc.org/periodic-table/element/38/strontium

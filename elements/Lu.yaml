@@ -1,0 +1,32 @@
+atomic_number: 71
+symbol: Lu
+name: Lutetium
+category: Lanthanide
+category_label: Lanthanide
+period: 6
+group: null
+group_label: Lanthanide
+block: f
+grid_row: 9
+grid_col: 18
+phase: solid
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '174.967'
+atomic_mass_value: 174.967
+atomic_mass_most_stable_isotope: false
+oxidation_states: '*3*'
+oxidation_states_parsed:
+- state: '3'
+  common: true
+ionization_energy: '5.426'
+ionization_energy_ev: 5.426
+electron_configuration: '[Xe] 4f^{14}5d^{1}6s^{2}'
+electron_configuration_formatted: '[Xe]4f¹⁴5d¹6s²'
+electron_configuration_html: '[Xe]4f<sup>14</sup>5d<sup>1</sup>6s<sup>2</sup>'
+atomic_radius: '2.24'
+atomic_radius_angstrom: 2.24
+electron_affinity: '0.34'
+electron_affinity_ev: 0.34
+rsc_url: https://www.rsc.org/periodic-table/element/71/lutetium

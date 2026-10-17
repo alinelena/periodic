@@ -1,0 +1,32 @@
+atomic_number: 5
+symbol: B
+name: Boron
+category: Metalloid
+category_label: Metalloid
+period: 2
+group: 13
+group_label: 13 IIIA
+block: p
+grid_row: 2
+grid_col: 13
+phase: solid
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '10.81'
+atomic_mass_value: 10.81
+atomic_mass_most_stable_isotope: false
+oxidation_states: '*3*'
+oxidation_states_parsed:
+- state: '3'
+  common: true
+ionization_energy: '8.298'
+ionization_energy_ev: 8.298
+electron_configuration: '[He] 2s^{2}2p^{1}'
+electron_configuration_formatted: '[He]2s²2p¹'
+electron_configuration_html: '[He]2s<sup>2</sup>2p<sup>1</sup>'
+atomic_radius: '1.92'
+atomic_radius_angstrom: 1.92
+electron_affinity: '0.2797'
+electron_affinity_ev: 0.2797
+rsc_url: https://www.rsc.org/periodic-table/element/5/boron

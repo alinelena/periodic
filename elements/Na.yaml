@@ -1,0 +1,32 @@
+atomic_number: 11
+symbol: Na
+name: Sodium
+category: AlkaliMetal
+category_label: Alkali Metal
+period: 3
+group: 1
+group_label: 1 IA
+block: s
+grid_row: 3
+grid_col: 1
+phase: solid
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '22.990'
+atomic_mass_value: 22.99
+atomic_mass_most_stable_isotope: false
+oxidation_states: '*1*'
+oxidation_states_parsed:
+- state: '1'
+  common: true
+ionization_energy: '5.139'
+ionization_energy_ev: 5.139
+electron_configuration: '[Ne] 3s^{1}'
+electron_configuration_formatted: '[Ne]3s¹'
+electron_configuration_html: '[Ne]3s<sup>1</sup>'
+atomic_radius: '2.27'
+atomic_radius_angstrom: 2.27
+electron_affinity: '0.5479'
+electron_affinity_ev: 0.5479
+rsc_url: https://www.rsc.org/periodic-table/element/11/sodium

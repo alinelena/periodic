@@ -1,0 +1,32 @@
+atomic_number: 43
+symbol: Tc
+name: Technetium
+category: TransMetal
+category_label: Transitional Metal
+period: 5
+group: 7
+group_label: 7 VIIB
+block: d
+grid_row: 5
+grid_col: 7
+phase: solid
+lab_made: true
+radioactive_marker: false
+is_radioactive: true
+atomic_mass: '[98]'
+atomic_mass_value: 98.0
+atomic_mass_most_stable_isotope: true
+oxidation_states: '*7*'
+oxidation_states_parsed:
+- state: '7'
+  common: true
+ionization_energy: '7.28'
+ionization_energy_ev: 7.28
+electron_configuration: '[Kr] 4d^{5}5s^{2}'
+electron_configuration_formatted: '[Kr]4d⁵5s²'
+electron_configuration_html: '[Kr]4d<sup>5</sup>5s<sup>2</sup>'
+atomic_radius: '2.16'
+atomic_radius_angstrom: 2.16
+electron_affinity: '0.55'
+electron_affinity_ev: 0.55
+rsc_url: https://www.rsc.org/periodic-table/element/43/technetium

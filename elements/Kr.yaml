@@ -1,0 +1,32 @@
+atomic_number: 36
+symbol: Kr
+name: Krypton
+category: NobleGas
+category_label: Noble gas
+period: 4
+group: 18
+group_label: 18 VIIIA
+block: p
+grid_row: 4
+grid_col: 18
+phase: gas
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '83.798'
+atomic_mass_value: 83.798
+atomic_mass_most_stable_isotope: false
+oxidation_states: '*2*'
+oxidation_states_parsed:
+- state: '2'
+  common: true
+ionization_energy: '14.0'
+ionization_energy_ev: 14.0
+electron_configuration: '[Ar] 3d^{10}4s^{2}4p^{6}'
+electron_configuration_formatted: '[Ar]3d¹⁰4s²4p⁶'
+electron_configuration_html: '[Ar]3d<sup>10</sup>4s<sup>2</sup>4p<sup>6</sup>'
+atomic_radius: '2.02'
+atomic_radius_angstrom: 2.02
+electron_affinity: Ns
+electron_affinity_ev: null
+rsc_url: https://www.rsc.org/periodic-table/element/36/krypton

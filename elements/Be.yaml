@@ -1,0 +1,32 @@
+atomic_number: 4
+symbol: Be
+name: Beryllium
+category: AlkalineEarthMetal
+category_label: Alkaline Earth Metal
+period: 2
+group: 2
+group_label: 2 IIA
+block: s
+grid_row: 2
+grid_col: 2
+phase: solid
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '9.012'
+atomic_mass_value: 9.012
+atomic_mass_most_stable_isotope: false
+oxidation_states: '*2*'
+oxidation_states_parsed:
+- state: '2'
+  common: true
+ionization_energy: '9.323'
+ionization_energy_ev: 9.323
+electron_configuration: '[He] 2s^{2}'
+electron_configuration_formatted: '[He]2s²'
+electron_configuration_html: '[He]2s<sup>2</sup>'
+atomic_radius: '1.53'
+atomic_radius_angstrom: 1.53
+electron_affinity: Ns
+electron_affinity_ev: null
+rsc_url: https://www.rsc.org/periodic-table/element/4/beryllium

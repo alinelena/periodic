@@ -1,0 +1,40 @@
+atomic_number: 23
+symbol: V
+name: Vanadium
+category: TransMetal
+category_label: Transitional Metal
+period: 4
+group: 5
+group_label: 5 VB
+block: d
+grid_row: 4
+grid_col: 5
+phase: solid
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '50.942'
+atomic_mass_value: 50.942
+atomic_mass_most_stable_isotope: false
+oxidation_states: '*5* 4 3 2 0'
+oxidation_states_parsed:
+- state: '5'
+  common: true
+- state: '4'
+  common: false
+- state: '3'
+  common: false
+- state: '2'
+  common: false
+- state: '0'
+  common: false
+ionization_energy: '6.746'
+ionization_energy_ev: 6.746
+electron_configuration: '[Ar] 3d^{3}4s^{2}'
+electron_configuration_formatted: '[Ar]3d³4s²'
+electron_configuration_html: '[Ar]3d<sup>3</sup>4s<sup>2</sup>'
+atomic_radius: '2.07'
+atomic_radius_angstrom: 2.07
+electron_affinity: '0.525'
+electron_affinity_ev: 0.525
+rsc_url: https://www.rsc.org/periodic-table/element/23/vanadium

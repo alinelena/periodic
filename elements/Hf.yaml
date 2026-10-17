@@ -1,0 +1,32 @@
+atomic_number: 72
+symbol: Hf
+name: Hafnium
+category: TransMetal
+category_label: Transitional Metal
+period: 6
+group: 4
+group_label: 4 IVB
+block: d
+grid_row: 6
+grid_col: 4
+phase: solid
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '178.486'
+atomic_mass_value: 178.486
+atomic_mass_most_stable_isotope: false
+oxidation_states: '*4*'
+oxidation_states_parsed:
+- state: '4'
+  common: true
+ionization_energy: '6.825'
+ionization_energy_ev: 6.825
+electron_configuration: '[Xe] 4f^{14}5d^{2}6s^{2}'
+electron_configuration_formatted: '[Xe]4f¹⁴5d²6s²'
+electron_configuration_html: '[Xe]4f<sup>14</sup>5d<sup>2</sup>6s<sup>2</sup>'
+atomic_radius: '2.23'
+atomic_radius_angstrom: 2.23
+electron_affinity: '0.014'
+electron_affinity_ev: 0.014
+rsc_url: https://www.rsc.org/periodic-table/element/72/hafnium

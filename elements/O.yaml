@@ -1,0 +1,34 @@
+atomic_number: 8
+symbol: O
+name: Oxygen
+category: Nonmetal
+category_label: Non metal
+period: 2
+group: 16
+group_label: 16 VIA
+block: p
+grid_row: 2
+grid_col: 16
+phase: gas
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '15.999'
+atomic_mass_value: 15.999
+atomic_mass_most_stable_isotope: false
+oxidation_states: -1 *-2*
+oxidation_states_parsed:
+- state: '-1'
+  common: false
+- state: '-2'
+  common: true
+ionization_energy: '13.62'
+ionization_energy_ev: 13.62
+electron_configuration: '[He] 2s^{2}2p^{4}'
+electron_configuration_formatted: '[He]2s²2p⁴'
+electron_configuration_html: '[He]2s<sup>2</sup>2p<sup>4</sup>'
+atomic_radius: '1.52'
+atomic_radius_angstrom: 1.52
+electron_affinity: '1.461'
+electron_affinity_ev: 1.461
+rsc_url: https://www.rsc.org/periodic-table/element/8/oxygen

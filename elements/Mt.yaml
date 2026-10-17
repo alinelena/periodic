@@ -1,0 +1,30 @@
+atomic_number: 109
+symbol: Mt
+name: Meitnerium
+category: Unknown
+category_label: Unknown properties
+period: 7
+group: 9
+group_label: 9 VIIIB
+block: d
+grid_row: 7
+grid_col: 9
+phase: unknown
+lab_made: true
+radioactive_marker: false
+is_radioactive: true
+atomic_mass: '[278]'
+atomic_mass_value: 278.0
+atomic_mass_most_stable_isotope: true
+oxidation_states: U
+oxidation_states_parsed: []
+ionization_energy: U
+ionization_energy_ev: null
+electron_configuration: '[Rn] 5f^{14}6d^{7}7s^{2}'
+electron_configuration_formatted: '[Rn]5f¹⁴6d⁷7s²'
+electron_configuration_html: '[Rn]5f<sup>14</sup>6d<sup>7</sup>7s<sup>2</sup>'
+atomic_radius: U
+atomic_radius_angstrom: null
+electron_affinity: U
+electron_affinity_ev: null
+rsc_url: https://www.rsc.org/periodic-table/element/109/meitnerium

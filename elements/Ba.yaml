@@ -1,0 +1,32 @@
+atomic_number: 56
+symbol: Ba
+name: Barium
+category: AlkalineEarthMetal
+category_label: Alkaline Earth Metal
+period: 6
+group: 2
+group_label: 2 IIA
+block: s
+grid_row: 6
+grid_col: 2
+phase: solid
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '137.327'
+atomic_mass_value: 137.327
+atomic_mass_most_stable_isotope: false
+oxidation_states: '*2*'
+oxidation_states_parsed:
+- state: '2'
+  common: true
+ionization_energy: '5.212'
+ionization_energy_ev: 5.212
+electron_configuration: '[Xe] 6s^{2}'
+electron_configuration_formatted: '[Xe]6s²'
+electron_configuration_html: '[Xe]6s<sup>2</sup>'
+atomic_radius: '2.68'
+atomic_radius_angstrom: 2.68
+electron_affinity: '0.1446'
+electron_affinity_ev: 0.1446
+rsc_url: https://www.rsc.org/periodic-table/element/56/barium

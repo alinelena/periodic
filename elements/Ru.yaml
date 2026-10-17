@@ -1,0 +1,44 @@
+atomic_number: 44
+symbol: Ru
+name: Ruthenium
+category: TransMetal
+category_label: Transitional Metal
+period: 5
+group: 8
+group_label: 8 VIIIB
+block: d
+grid_row: 5
+grid_col: 8
+phase: solid
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '101.07'
+atomic_mass_value: 101.07
+atomic_mass_most_stable_isotope: false
+oxidation_states: 8 6 *4* 3 2 0 -2
+oxidation_states_parsed:
+- state: '8'
+  common: false
+- state: '6'
+  common: false
+- state: '4'
+  common: true
+- state: '3'
+  common: false
+- state: '2'
+  common: false
+- state: '0'
+  common: false
+- state: '-2'
+  common: false
+ionization_energy: '7.36'
+ionization_energy_ev: 7.36
+electron_configuration: '[Kr] 4d^{7}5s^{1}'
+electron_configuration_formatted: '[Kr]4d⁷5s¹'
+electron_configuration_html: '[Kr]4d<sup>7</sup>5s<sup>1</sup>'
+atomic_radius: '2.13'
+atomic_radius_angstrom: 2.13
+electron_affinity: '1.05'
+electron_affinity_ev: 1.05
+rsc_url: https://www.rsc.org/periodic-table/element/44/ruthenium

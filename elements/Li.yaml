@@ -1,0 +1,32 @@
+atomic_number: 3
+symbol: Li
+name: Lithium
+category: AlkaliMetal
+category_label: Alkali Metal
+period: 2
+group: 1
+group_label: 1 IA
+block: s
+grid_row: 2
+grid_col: 1
+phase: solid
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '6.94'
+atomic_mass_value: 6.94
+atomic_mass_most_stable_isotope: false
+oxidation_states: '*1*'
+oxidation_states_parsed:
+- state: '1'
+  common: true
+ionization_energy: '5.392'
+ionization_energy_ev: 5.392
+electron_configuration: '[He] 2s^{1}'
+electron_configuration_formatted: '[He]2s¹'
+electron_configuration_html: '[He]2s<sup>1</sup>'
+atomic_radius: '1.82'
+atomic_radius_angstrom: 1.82
+electron_affinity: '0.618'
+electron_affinity_ev: 0.618
+rsc_url: https://www.rsc.org/periodic-table/element/3/lithium

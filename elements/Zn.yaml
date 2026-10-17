@@ -1,0 +1,32 @@
+atomic_number: 30
+symbol: Zn
+name: Zinc
+category: TransMetal
+category_label: Transitional Metal
+period: 4
+group: 12
+group_label: 12 IIB
+block: d
+grid_row: 4
+grid_col: 12
+phase: solid
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '65.38'
+atomic_mass_value: 65.38
+atomic_mass_most_stable_isotope: false
+oxidation_states: '*2*'
+oxidation_states_parsed:
+- state: '2'
+  common: true
+ionization_energy: '9.394'
+ionization_energy_ev: 9.394
+electron_configuration: '[Ar] 3d^{10}4s^{2}'
+electron_configuration_formatted: '[Ar]3d¹⁰4s²'
+electron_configuration_html: '[Ar]3d<sup>10</sup>4s<sup>2</sup>'
+atomic_radius: '2.01'
+atomic_radius_angstrom: 2.01
+electron_affinity: Ns
+electron_affinity_ev: null
+rsc_url: https://www.rsc.org/periodic-table/element/30/zinc

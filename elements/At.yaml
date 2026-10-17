@@ -1,0 +1,40 @@
+atomic_number: 85
+symbol: At
+name: Astatine
+category: Metalloid
+category_label: Metalloid
+period: 6
+group: 17
+group_label: 17 VIIA
+block: p
+grid_row: 6
+grid_col: 17
+phase: unknown
+lab_made: false
+radioactive_marker: false
+is_radioactive: true
+atomic_mass: '[210]'
+atomic_mass_value: 210.0
+atomic_mass_most_stable_isotope: true
+oxidation_states: 7 5 3 1 *-1*
+oxidation_states_parsed:
+- state: '7'
+  common: false
+- state: '5'
+  common: false
+- state: '3'
+  common: false
+- state: '1'
+  common: false
+- state: '-1'
+  common: true
+ionization_energy: U
+ionization_energy_ev: null
+electron_configuration: '[Xe] 4f^{14}5d^{10}6s^{2}6p^{5}'
+electron_configuration_formatted: '[Xe]4f¹⁴5d¹⁰6s²6p⁵'
+electron_configuration_html: '[Xe]4f<sup>14</sup>5d<sup>10</sup>6s<sup>2</sup>6p<sup>5</sup>'
+atomic_radius: '2.02'
+atomic_radius_angstrom: 2.02
+electron_affinity: '2.8'
+electron_affinity_ev: 2.8
+rsc_url: https://www.rsc.org/periodic-table/element/85/astatine

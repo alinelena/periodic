@@ -1,0 +1,32 @@
+atomic_number: 32
+symbol: Ge
+name: Germanium
+category: Metalloid
+category_label: Metalloid
+period: 4
+group: 14
+group_label: 14 IVA
+block: p
+grid_row: 4
+grid_col: 14
+phase: solid
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '72.630'
+atomic_mass_value: 72.63
+atomic_mass_most_stable_isotope: false
+oxidation_states: '*4*'
+oxidation_states_parsed:
+- state: '4'
+  common: true
+ionization_energy: '7.899'
+ionization_energy_ev: 7.899
+electron_configuration: '[Ar] 3d^{10}4s^{2}4p^{2}'
+electron_configuration_formatted: '[Ar]3d¹⁰4s²4p²'
+electron_configuration_html: '[Ar]3d<sup>10</sup>4s<sup>2</sup>4p<sup>2</sup>'
+atomic_radius: '2.11'
+atomic_radius_angstrom: 2.11
+electron_affinity: '1.233'
+electron_affinity_ev: 1.233
+rsc_url: https://www.rsc.org/periodic-table/element/32/germanium

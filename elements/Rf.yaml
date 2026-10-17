@@ -1,0 +1,30 @@
+atomic_number: 104
+symbol: Rf
+name: Rutherfordium
+category: TransMetal
+category_label: Transitional Metal
+period: 7
+group: 4
+group_label: 4 IVB
+block: d
+grid_row: 7
+grid_col: 4
+phase: unknown
+lab_made: true
+radioactive_marker: false
+is_radioactive: true
+atomic_mass: '[267]'
+atomic_mass_value: 267.0
+atomic_mass_most_stable_isotope: true
+oxidation_states: U
+oxidation_states_parsed: []
+ionization_energy: '6.001'
+ionization_energy_ev: 6.001
+electron_configuration: '[Rn] 5f^{14}6d^{2}7s^{2}'
+electron_configuration_formatted: '[Rn]5f¹⁴6d²7s²'
+electron_configuration_html: '[Rn]5f<sup>14</sup>6d<sup>2</sup>7s<sup>2</sup>'
+atomic_radius: U
+atomic_radius_angstrom: null
+electron_affinity: U
+electron_affinity_ev: null
+rsc_url: https://www.rsc.org/periodic-table/element/104/rutherfordium

@@ -1,0 +1,32 @@
+atomic_number: 90
+symbol: Th
+name: Thorium
+category: Actinide
+category_label: Actinide
+period: 7
+group: null
+group_label: Actinide
+block: f
+grid_row: 10
+grid_col: 5
+phase: solid
+lab_made: false
+radioactive_marker: false
+is_radioactive: true
+atomic_mass: '232.038'
+atomic_mass_value: 232.038
+atomic_mass_most_stable_isotope: false
+oxidation_states: '*4*'
+oxidation_states_parsed:
+- state: '4'
+  common: true
+ionization_energy: '6.307'
+ionization_energy_ev: 6.307
+electron_configuration: '[Rn] 6d^{2}7s^{2}'
+electron_configuration_formatted: '[Rn]6d²7s²'
+electron_configuration_html: '[Rn]6d<sup>2</sup>7s<sup>2</sup>'
+atomic_radius: '2.45'
+atomic_radius_angstrom: 2.45
+electron_affinity: U
+electron_affinity_ev: null
+rsc_url: https://www.rsc.org/periodic-table/element/90/thorium

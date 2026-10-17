@@ -1,0 +1,32 @@
+atomic_number: 66
+symbol: Dy
+name: Dysprosium
+category: Lanthanide
+category_label: Lanthanide
+period: 6
+group: null
+group_label: Lanthanide
+block: f
+grid_row: 9
+grid_col: 13
+phase: solid
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '162.500'
+atomic_mass_value: 162.5
+atomic_mass_most_stable_isotope: false
+oxidation_states: '*3*'
+oxidation_states_parsed:
+- state: '3'
+  common: true
+ionization_energy: '5.939'
+ionization_energy_ev: 5.939
+electron_configuration: '[Xe] 4f^{10}6s^{2}'
+electron_configuration_formatted: '[Xe]4f¹⁰6s²'
+electron_configuration_html: '[Xe]4f<sup>10</sup>6s<sup>2</sup>'
+atomic_radius: '2.31'
+atomic_radius_angstrom: 2.31
+electron_affinity: U
+electron_affinity_ev: null
+rsc_url: https://www.rsc.org/periodic-table/element/66/dysprosium

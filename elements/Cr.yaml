@@ -1,0 +1,38 @@
+atomic_number: 24
+symbol: Cr
+name: Chromium
+category: TransMetal
+category_label: Transitional Metal
+period: 4
+group: 6
+group_label: 6 VIB
+block: d
+grid_row: 4
+grid_col: 6
+phase: solid
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '51.996'
+atomic_mass_value: 51.996
+atomic_mass_most_stable_isotope: false
+oxidation_states: 6 *3* 2 0
+oxidation_states_parsed:
+- state: '6'
+  common: false
+- state: '3'
+  common: true
+- state: '2'
+  common: false
+- state: '0'
+  common: false
+ionization_energy: '6.766'
+ionization_energy_ev: 6.766
+electron_configuration: '[Ar] 3d^{5}4s^{1}'
+electron_configuration_formatted: '[Ar]3d⁵4s¹'
+electron_configuration_html: '[Ar]3d<sup>5</sup>4s<sup>1</sup>'
+atomic_radius: '2.06'
+atomic_radius_angstrom: 2.06
+electron_affinity: '0.666'
+electron_affinity_ev: 0.666
+rsc_url: https://www.rsc.org/periodic-table/element/24/chromium

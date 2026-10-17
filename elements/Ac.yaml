@@ -1,0 +1,32 @@
+atomic_number: 89
+symbol: Ac
+name: Actinium
+category: Actinide
+category_label: Actinide
+period: 7
+group: 3
+group_label: 3 IIIA
+block: f
+grid_row: 10
+grid_col: 4
+phase: solid
+lab_made: false
+radioactive_marker: false
+is_radioactive: true
+atomic_mass: '[227]'
+atomic_mass_value: 227.0
+atomic_mass_most_stable_isotope: true
+oxidation_states: '*3*'
+oxidation_states_parsed:
+- state: '3'
+  common: true
+ionization_energy: '5.17'
+ionization_energy_ev: 5.17
+electron_configuration: '[Rn] 6d^{1}7s^{2}'
+electron_configuration_formatted: '[Rn]6d¹7s²'
+electron_configuration_html: '[Rn]6d<sup>1</sup>7s<sup>2</sup>'
+atomic_radius: '2.47'
+atomic_radius_angstrom: 2.47
+electron_affinity: '0.35'
+electron_affinity_ev: 0.35
+rsc_url: https://www.rsc.org/periodic-table/element/89/actinium

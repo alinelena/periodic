@@ -1,0 +1,69 @@
+name: Publish Periodic Table to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Noto fonts for Typst rendering
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fonts-noto-core fonts-noto-unhinted fonts-noto-color-emoji
+
+      - name: Set up Typst
+        uses: typst-community/setup-typst@v4
+        with:
+          typst-version: "0.14.2"
+
+      - name: Set up uv and Python
+        uses: astral-sh/setup-uv@v5
+
+      - name: Compile printable PDF and SVG from periodic-table.typ
+        run: |
+          typst compile periodic-table.typ periodic-table.pdf
+          typst compile --input paper=a4 periodic-table.typ periodic-table-a4.pdf
+          typst compile periodic-table.typ periodic-table.svg
+
+      - name: Build site HTML from element YAML files
+        run: |
+          uv run --with pyyaml python3 scripts/build_site.py
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Render Quarto Website
+        run: |
+          quarto render
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

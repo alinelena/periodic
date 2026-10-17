@@ -1,0 +1,40 @@
+atomic_number: 35
+symbol: Br
+name: Bromine
+category: Halogen
+category_label: Halogen
+period: 4
+group: 17
+group_label: 17 VIIA
+block: p
+grid_row: 4
+grid_col: 17
+phase: liquid
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '79.904'
+atomic_mass_value: 79.904
+atomic_mass_most_stable_isotope: false
+oxidation_states: 7 5 3 1 *-1*
+oxidation_states_parsed:
+- state: '7'
+  common: false
+- state: '5'
+  common: false
+- state: '3'
+  common: false
+- state: '1'
+  common: false
+- state: '-1'
+  common: true
+ionization_energy: '11.81'
+ionization_energy_ev: 11.81
+electron_configuration: '[Ar] 3d^{10}4s^{2}4p^{5}'
+electron_configuration_formatted: '[Ar]3d¹⁰4s²4p⁵'
+electron_configuration_html: '[Ar]3d<sup>10</sup>4s<sup>2</sup>4p<sup>5</sup>'
+atomic_radius: '1.85'
+atomic_radius_angstrom: 1.85
+electron_affinity: '3.364'
+electron_affinity_ev: 3.364
+rsc_url: https://www.rsc.org/periodic-table/element/35/bromine

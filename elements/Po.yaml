@@ -1,0 +1,36 @@
+atomic_number: 84
+symbol: Po
+name: Polonium
+category: Metalloid
+category_label: Metalloid
+period: 6
+group: 16
+group_label: 16 VIA
+block: p
+grid_row: 6
+grid_col: 16
+phase: solid
+lab_made: false
+radioactive_marker: false
+is_radioactive: true
+atomic_mass: '[209]'
+atomic_mass_value: 209.0
+atomic_mass_most_stable_isotope: true
+oxidation_states: 6 *4* 2
+oxidation_states_parsed:
+- state: '6'
+  common: false
+- state: '4'
+  common: true
+- state: '2'
+  common: false
+ionization_energy: '8.414'
+ionization_energy_ev: 8.414
+electron_configuration: '[Xe] 4f^{14}5d^{10}6s^{2}6p^{4}'
+electron_configuration_formatted: '[Xe]4f¹⁴5d¹⁰6s²6p⁴'
+electron_configuration_html: '[Xe]4f<sup>14</sup>5d<sup>10</sup>6s<sup>2</sup>6p<sup>4</sup>'
+atomic_radius: '1.97'
+atomic_radius_angstrom: 1.97
+electron_affinity: '1.9'
+electron_affinity_ev: 1.9
+rsc_url: https://www.rsc.org/periodic-table/element/84/polonium

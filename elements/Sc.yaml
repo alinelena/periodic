@@ -1,0 +1,32 @@
+atomic_number: 21
+symbol: Sc
+name: Scandium
+category: TransMetal
+category_label: Transitional Metal
+period: 4
+group: 3
+group_label: 3 IIIA
+block: d
+grid_row: 4
+grid_col: 3
+phase: solid
+lab_made: false
+radioactive_marker: false
+is_radioactive: false
+atomic_mass: '44.956'
+atomic_mass_value: 44.956
+atomic_mass_most_stable_isotope: false
+oxidation_states: '*3*'
+oxidation_states_parsed:
+- state: '3'
+  common: true
+ionization_energy: '6.561'
+ionization_energy_ev: 6.561
+electron_configuration: '[Ar] 3d^{1}4s^{2}'
+electron_configuration_formatted: '[Ar]3d¹4s²'
+electron_configuration_html: '[Ar]3d<sup>1</sup>4s<sup>2</sup>'
+atomic_radius: '2.15'
+atomic_radius_angstrom: 2.15
+electron_affinity: '0.188'
+electron_affinity_ev: 0.188
+rsc_url: https://www.rsc.org/periodic-table/element/21/scandium

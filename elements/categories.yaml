@@ -1,0 +1,156 @@
+title: Periodic Table of Elements
+links:
+  rsc: https://www.rsc.org/periodic-table
+  source_gitlab: https://gitlab.com/drFaustroll/periodic
+  source_github: https://github.com/alinelena/periodic
+categories:
+  AlkaliMetal:
+    id: AlkaliMetal
+    label: Alkali Metal
+    color_name: cb-burgundy
+    stroke: '#98070c'
+    fill: '#faede6'
+  AlkalineEarthMetal:
+    id: AlkalineEarthMetal
+    label: Alkaline Earth Metal
+    color_name: cb-brown
+    stroke: '#9e5e06'
+    fill: '#faf3ea'
+  TransMetal:
+    id: TransMetal
+    label: Transitional Metal
+    color_name: cb-salmon-pink
+    stroke: '#fdbe81'
+    fill: '#fffbf7'
+  Metal:
+    id: Metal
+    label: Post Trans Metal
+    color_name: cb-purple
+    stroke: '#5f015d'
+    fill: '#f2ebf3'
+  Metalloid:
+    id: Metalloid
+    label: Metalloid
+    color_name: cb-green-lime
+    stroke: '#00ae61'
+    fill: '#f3f9f4'
+  Nonmetal:
+    id: Nonmetal
+    label: Non metal
+    color_name: cb-green-sea
+    stroke: '#00739e'
+    fill: '#eaf3f9'
+  Halogen:
+    id: Halogen
+    label: Halogen
+    color_name: cb-blue-light
+    stroke: '#b1c8e7'
+    fill: '#fafbfe'
+  NobleGas:
+    id: NobleGas
+    label: Noble gas
+    color_name: cb-blue-sky
+    stroke: '#6c9ed4'
+    fill: '#f5f7fd'
+  Lanthanide:
+    id: Lanthanide
+    label: Lanthanide
+    color_name: cb-rose
+    stroke: '#f58a91'
+    fill: '#fff8f7'
+  Actinide:
+    id: Actinide
+    label: Actinide
+    color_name: cb-lilac
+    stroke: '#b57fb8'
+    fill: '#f9f7fb'
+  Unknown:
+    id: Unknown
+    label: Unknown properties
+    color_name: cb-clay
+    stroke: '#e2ca00'
+    fill: '#fdfbf1'
+phases:
+  solid:
+    id: solid
+    label: solid@273K
+    symbol: ⬛
+    color: '#9e5e06'
+  gas:
+    id: gas
+    label: gas@273K
+    symbol: ⬤
+    color: '#6c9ed4'
+  liquid:
+    id: liquid
+    label: liquid@273K
+    symbol: ▲
+    color: '#00739e'
+  unknown:
+    id: unknown
+    label: unknown
+    symbol: ◆
+    color: '#fdbe81'
+markers:
+  radioactive:
+    id: radioactive
+    label: radioactive
+    symbol: ☢
+    color: '#f58a91'
+  lab:
+    id: lab
+    label: lab made
+    symbol: ⚗
+    color: '#00ae61'
+groups:
+- number: 1
+  label: 1 IA
+- number: 2
+  label: 2 IIA
+- number: 3
+  label: 3 IIIA
+- number: 4
+  label: 4 IVB
+- number: 5
+  label: 5 VB
+- number: 6
+  label: 6 VIB
+- number: 7
+  label: 7 VIIB
+- number: 8
+  label: 8 VIIIB
+- number: 9
+  label: 9 VIIIB
+- number: 10
+  label: 10 VIIIB
+- number: 11
+  label: 11 IB
+- number: 12
+  label: 12 IIB
+- number: 13
+  label: 13 IIIA
+- number: 14
+  label: 14 IVA
+- number: 15
+  label: 15 VA
+- number: 16
+  label: 16 VIA
+- number: 17
+  label: 17 VIIA
+- number: 18
+  label: 18 VIIIA
+sample_element:
+  atomic_number: 43
+  phase: solid
+  lab_made: true
+  radioactive: true
+  atomic_mass: '[98]'
+  symbol: Tc
+  name: Technetium
+  category: TransMetal
+  oxidation_states: '*7*'
+  ionization_energy: '7.1194'
+  electron_configuration: '[Kr]4d^55s^2'
+  electron_configuration_formatted: '[Kr]4d⁵5s²'
+  atomic_radius: '2.16'
+  electron_affinity: '0.55'

@@ -1,0 +1,22 @@
+---
+paper: auto
+format:
+  typst:
+    keep-typ: true
+    margin:
+      x: 5mm
+      y: 5mm
+---
+
+`#let qmd-paper = "`{=typst}{{< meta paper >}}`"`{=typst}
+
+```{=typst}
+#set page(
+  ..(if qmd-paper != "" and qmd-paper != "auto" and not qmd-paper.starts-with("?") {
+    (paper: lower(qmd-paper), flipped: true, margin: 5mm, numbering: none)
+  } else {
+    (width: auto, height: auto, margin: 5mm, numbering: none)
+  }),
+)
+#include "periodic-table.typ"
+```

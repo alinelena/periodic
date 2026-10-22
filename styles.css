@@ -1216,14 +1216,308 @@ body.pt-dark-theme .btn-close {
   color: var(--text-primary);
 }
 
+/* ==========================================================================
+   Page Footer & Navigation Footer (Theme-adaptive styling & Coloured Pills)
+   ========================================================================== */
+footer.footer,
+.footer,
+.nav-footer,
 .page-footer {
   background-color: var(--bg-secondary) !important;
-  color: var(--text-muted) !important;
-  border-top: 1px solid var(--border-subtle);
+  color: var(--text-secondary) !important;
+  border-top: 1px solid var(--border-subtle) !important;
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
 }
 
-.page-footer a {
+.nav-footer {
+  padding: 0.85rem 1.25rem !important;
+  min-height: 3.5rem;
+  display: flex !important;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 0.75rem;
+}
+
+.nav-footer-left,
+.nav-footer-center,
+.nav-footer-right {
+  color: var(--text-secondary) !important;
+  font-size: 0.85rem !important;
+  display: flex;
+  align-items: center;
+}
+
+.nav-footer-left p,
+.nav-footer-center p,
+.nav-footer-right p {
+  color: var(--text-secondary) !important;
+  margin: 0 !important;
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.nav-footer-center {
+  justify-content: center;
+}
+
+.nav-footer-left {
+  justify-content: flex-start;
+}
+
+.nav-footer-right {
+  justify-content: flex-end;
+}
+
+/* Footer Coloured Pills */
+footer.footer a,
+.nav-footer a,
+.page-footer a,
+.pt-footer-card a:not(.btn) {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.22rem 0.65rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.35;
+  text-decoration: none !important;
+  border: 1px solid color-mix(in srgb, var(--accent-cyan) 38%, transparent);
+  background-color: color-mix(in srgb, var(--accent-cyan) 14%, transparent);
   color: var(--accent-cyan);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  vertical-align: middle;
+}
+
+footer.footer a::before,
+.nav-footer a::before,
+.page-footer a::before,
+.pt-footer-card a:not(.btn)::before {
+  display: inline-block;
+  font-family: "bootstrap-icons" !important;
+  font-style: normal;
+  font-weight: normal !important;
+  line-height: 1;
+  font-size: 0.9em;
+}
+
+footer.footer a:hover,
+.nav-footer a:hover,
+.page-footer a:hover,
+.pt-footer-card a:not(.btn)::hover {
+  transform: translateY(-1px);
+  text-decoration: none !important;
+}
+
+/* RSC Periodic Table Pill - Cyan / Primary Accent */
+footer.footer a[href*="rsc.org"],
+.nav-footer a[href*="rsc.org"],
+.page-footer a[href*="rsc.org"],
+.pt-footer-card a[href*="rsc.org"] {
+  background-color: color-mix(in srgb, var(--accent-cyan) 16%, transparent);
+  border-color: color-mix(in srgb, var(--accent-cyan) 42%, transparent);
+  color: var(--accent-cyan);
+}
+
+footer.footer a[href*="rsc.org"]::before,
+.nav-footer a[href*="rsc.org"]::before,
+.page-footer a[href*="rsc.org"]::before,
+.pt-footer-card a[href*="rsc.org"]::before {
+  content: "\f90a"; /* bi-flask */
+}
+
+footer.footer a[href*="rsc.org"]:hover,
+.nav-footer a[href*="rsc.org"]:hover,
+.page-footer a[href*="rsc.org"]:hover,
+.pt-footer-card a[href*="rsc.org"]:hover {
+  background-color: var(--accent-cyan);
+  border-color: var(--accent-cyan);
+  color: var(--bg-primary);
+  box-shadow: 0 3px 12px color-mix(in srgb, var(--accent-cyan) 35%, transparent);
+}
+
+[data-theme="light"] footer.footer a[href*="rsc.org"],
+[data-theme="light"] .nav-footer a[href*="rsc.org"],
+[data-theme="light"] .page-footer a[href*="rsc.org"],
+[data-theme="light"] .pt-footer-card a[href*="rsc.org"] {
+  background-color: color-mix(in srgb, var(--accent-cyan) 12%, #f0fdf4);
+  border-color: color-mix(in srgb, var(--accent-cyan) 35%, transparent);
+  color: var(--accent-cyan);
+}
+
+[data-theme="light"] footer.footer a[href*="rsc.org"]:hover,
+[data-theme="light"] .nav-footer a[href*="rsc.org"]:hover,
+[data-theme="light"] .page-footer a[href*="rsc.org"]:hover,
+[data-theme="light"] .pt-footer-card a[href*="rsc.org"]:hover {
+  background-color: var(--accent-cyan);
+  border-color: var(--accent-cyan);
+  color: #ffffff;
+}
+
+/* GitHub Pill - Purple / Violet */
+footer.footer a[href*="github.com"],
+.nav-footer a[href*="github.com"],
+.page-footer a[href*="github.com"],
+.pt-footer-card a[href*="github.com"] {
+  background-color: rgba(168, 85, 247, 0.16);
+  border-color: rgba(168, 85, 247, 0.42);
+  color: #c084fc;
+}
+
+footer.footer a[href*="github.com"]::before,
+.nav-footer a[href*="github.com"]::before,
+.page-footer a[href*="github.com"]::before,
+.pt-footer-card a[href*="github.com"]::before {
+  content: "\f3ed"; /* bi-github */
+}
+
+footer.footer a[href*="github.com"]:hover,
+.nav-footer a[href*="github.com"]:hover,
+.page-footer a[href*="github.com"]:hover,
+.pt-footer-card a[href*="github.com"]:hover {
+  background-color: #a855f7;
+  border-color: #a855f7;
+  color: #ffffff;
+  box-shadow: 0 3px 12px rgba(168, 85, 247, 0.35);
+}
+
+[data-theme="light"] footer.footer a[href*="github.com"],
+[data-theme="light"] .nav-footer a[href*="github.com"],
+[data-theme="light"] .page-footer a[href*="github.com"],
+[data-theme="light"] .pt-footer-card a[href*="github.com"] {
+  background-color: rgba(126, 34, 206, 0.1);
+  border-color: rgba(126, 34, 206, 0.3);
+  color: #6b21a8;
+}
+
+[data-theme="light"] footer.footer a[href*="github.com"]:hover,
+[data-theme="light"] .nav-footer a[href*="github.com"]:hover,
+[data-theme="light"] .page-footer a[href*="github.com"]:hover,
+[data-theme="light"] .pt-footer-card a[href*="github.com"]:hover {
+  background-color: #7e22ce;
+  border-color: #7e22ce;
+  color: #ffffff;
+}
+
+/* GitLab Pill - Orange / Coral */
+footer.footer a[href*="gitlab.com"],
+.nav-footer a[href*="gitlab.com"],
+.page-footer a[href*="gitlab.com"],
+.pt-footer-card a[href*="gitlab.com"] {
+  background-color: rgba(249, 115, 22, 0.16);
+  border-color: rgba(249, 115, 22, 0.45);
+  color: #fb923c;
+}
+
+footer.footer a[href*="gitlab.com"]::before,
+.nav-footer a[href*="gitlab.com"]::before,
+.page-footer a[href*="gitlab.com"]::before,
+.pt-footer-card a[href*="gitlab.com"]::before {
+  content: "\f7e5"; /* bi-gitlab */
+}
+
+footer.footer a[href*="gitlab.com"]:hover,
+.nav-footer a[href*="gitlab.com"]:hover,
+.page-footer a[href*="gitlab.com"]:hover,
+.pt-footer-card a[href*="gitlab.com"]:hover {
+  background-color: #f97316;
+  border-color: #f97316;
+  color: #ffffff;
+  box-shadow: 0 3px 12px rgba(249, 115, 22, 0.35);
+}
+
+[data-theme="light"] footer.footer a[href*="gitlab.com"],
+[data-theme="light"] .nav-footer a[href*="gitlab.com"],
+[data-theme="light"] .page-footer a[href*="gitlab.com"],
+[data-theme="light"] .pt-footer-card a[href*="gitlab.com"] {
+  background-color: rgba(234, 88, 12, 0.12);
+  border-color: rgba(234, 88, 12, 0.35);
+  color: #c2410c;
+}
+
+[data-theme="light"] footer.footer a[href*="gitlab.com"]:hover,
+[data-theme="light"] .nav-footer a[href*="gitlab.com"]:hover,
+[data-theme="light"] .page-footer a[href*="gitlab.com"]:hover,
+[data-theme="light"] .pt-footer-card a[href*="gitlab.com"]:hover {
+  background-color: #ea580c;
+  border-color: #ea580c;
+  color: #ffffff;
+}
+
+/* YAML Schema Pill - Green / Emerald Accent */
+footer.footer a[href*="yaml"],
+.nav-footer a[href*="yaml"],
+.page-footer a[href*="yaml"],
+.pt-footer-card a[href*="yaml"]:not(.btn) {
+  background-color: color-mix(in srgb, var(--accent-green) 16%, transparent);
+  border-color: color-mix(in srgb, var(--accent-green) 42%, transparent);
+  color: var(--accent-green);
+}
+
+footer.footer a[href*="yaml"]::before,
+.nav-footer a[href*="yaml"]::before,
+.page-footer a[href*="yaml"]::before,
+.pt-footer-card a[href*="yaml"]:not(.btn)::before {
+  content: "\f76c"; /* bi-filetype-yml */
+}
+
+footer.footer a[href*="yaml"]:hover,
+.nav-footer a[href*="yaml"]:hover,
+.page-footer a[href*="yaml"]:hover,
+.pt-footer-card a[href*="yaml"]:not(.btn)::hover {
+  background-color: var(--accent-green);
+  border-color: var(--accent-green);
+  color: var(--bg-primary);
+  box-shadow: 0 3px 12px color-mix(in srgb, var(--accent-green) 35%, transparent);
+}
+
+[data-theme="light"] footer.footer a[href*="yaml"],
+[data-theme="light"] .nav-footer a[href*="yaml"],
+[data-theme="light"] .page-footer a[href*="yaml"],
+[data-theme="light"] .pt-footer-card a[href*="yaml"]:not(.btn) {
+  background-color: color-mix(in srgb, var(--accent-green) 12%, #f0fdf4);
+  border-color: color-mix(in srgb, var(--accent-green) 35%, transparent);
+  color: var(--accent-green);
+}
+
+[data-theme="light"] footer.footer a[href*="yaml"]:hover,
+[data-theme="light"] .nav-footer a[href*="yaml"]:hover,
+[data-theme="light"] .page-footer a[href*="yaml"]:hover,
+[data-theme="light"] .pt-footer-card a[href*="yaml"]:not(.btn)::hover {
+  background-color: var(--accent-green);
+  border-color: var(--accent-green);
+  color: #ffffff;
+}
+
+/* Responsive Footer Layout on Mobile */
+@media (max-width: 767.98px) {
+  .nav-footer {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 0.65rem !important;
+    padding: 0.85rem 0.5rem !important;
+  }
+
+  .nav-footer-left,
+  .nav-footer-center,
+  .nav-footer-right {
+    margin: 0 !important;
+    flex: auto !important;
+    justify-content: center !important;
+    text-align: center !important;
+    order: unset !important;
+  }
+
+  .nav-footer-left p,
+  .nav-footer-center p,
+  .nav-footer-right p {
+    justify-content: center !important;
+  }
 }
 
 .corner-theme-btn,

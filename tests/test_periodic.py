@@ -123,6 +123,16 @@ class TestPeriodicTableSite(unittest.TestCase):
         nav_left_texts = [item.get("text") for item in y_data["website"]["navbar"]["left"]]
         self.assertNotIn("YAML Schema", nav_left_texts, "YAML Schema must not be in top menu navbar")
 
+        # Footer theme adherence and coloured pills assertions
+        self.assertIn("footer.footer", css)
+        self.assertIn(".nav-footer", css)
+        self.assertIn(".nav-footer a", css)
+        self.assertIn("border-radius: 9999px", css)
+        self.assertIn('a[href*="rsc.org"]', css)
+        self.assertIn('a[href*="github.com"]', css)
+        self.assertIn('a[href*="gitlab.com"]', css)
+        self.assertIn('a[href*="yaml"]', css)
+
 
 if __name__ == "__main__":
     unittest.main()

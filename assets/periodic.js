@@ -375,11 +375,12 @@
       resetBtn.addEventListener("click", resetAllFilters);
     }
 
-    // Element Tile Hover & Click
+    // Element Tile Hover, Pointer & Click
     elemNodes.forEach((node) => {
       const sym = node.dataset.symbol;
       const el = elementsBySym[sym];
       node.addEventListener("mouseenter", () => updateSampleCard(el));
+      node.addEventListener("pointerdown", () => updateSampleCard(el));
       node.addEventListener("click", () => openElementModal(el.atomic_number));
       node.addEventListener("keydown", (e) => {
         if (e.key === "Enter" || e.key === " ") {

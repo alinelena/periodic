@@ -87,6 +87,12 @@ class TestPeriodicTableSite(unittest.TestCase):
         self.assertIn("function setDensity", js)
         self.assertIn("localStorage.getItem", js)
 
+        # CSS assertions for mobile sample element and legend
+        self.assertIn(".pt-sample-elem", css)
+        self.assertIn("min-width: 180px !important", css)
+        self.assertIn("@media (max-width: 575.98px)", css)
+        self.assertIn("grid-template-areas", css)
+
         # HTML assertions for mode control radio inputs
         self.assertIn('id="pt-width-fit"', app_html)
         self.assertIn('id="pt-width-scroll"', app_html)

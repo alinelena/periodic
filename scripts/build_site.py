@@ -355,7 +355,7 @@ def main() -> None:
             </div>
           </div>
           <div class="text-center mt-1">
-            <small class="text-muted">Hover any element to preview in the legend card, or click for full YAML &amp; properties</small>
+            <small class="text-muted">Hover or tap any element to preview in the legend card, or click for full YAML &amp; properties</small>
           </div>
         </div>
 

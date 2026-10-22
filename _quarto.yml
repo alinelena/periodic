@@ -73,9 +73,6 @@ website:
           - text: "Vector Graphic (Dark SVG)"
             href: downloads/periodic-table-dark.svg
             target: _blank
-      - text: "YAML Schema"
-        href: elements/categories.yaml
-        target: _blank
     right:
       - icon: github
         href: https://github.com/alinelena/periodic
@@ -97,6 +94,15 @@ format:
           <link rel="preconnect" href="https://fonts.googleapis.com">
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
           <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+          <script>
+            (function () {
+              try {
+                const savedTheme = localStorage.getItem("mlego-theme") || localStorage.getItem("site-theme") || localStorage.getItem("pt-theme") || "default";
+                document.documentElement.setAttribute("data-theme", savedTheme);
+                document.documentElement.setAttribute("data-bs-theme", savedTheme === "light" ? "light" : "dark");
+              } catch (e) {}
+            })();
+          </script>
     include-after-body:
       - text: |
           <script src="assets/periodic.js"></script>

@@ -454,6 +454,9 @@ def main() -> None:
             <label class="btn btn-outline-secondary" for="pt-bg-light" title="Light background">☀️ Light</label>
             <input type="radio" class="btn-check" name="pt-bg-theme" id="pt-bg-dark" value="dark" autocomplete="off">
             <label class="btn btn-outline-secondary" for="pt-bg-dark" title="Dark background">🌙 Dark</label>
+            <button type="button" class="btn btn-outline-secondary toolbar-theme-btn" id="toolbar-theme-toggle" aria-expanded="false" aria-controls="corner-theme-panel" title="Choose color theme">
+              <i class="bi bi-palette-fill text-info"></i> <span id="toolbar-theme-name" class="d-none d-md-inline ms-1">Cyber Cyan</span>
+            </button>
           </div>
         </div>
 
@@ -471,6 +474,56 @@ def main() -> None:
           <span class="small text-muted">(Grey = Unknown / Not stable)</span>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- Theme Selection Panel matching eu-github -->
+  <div id="corner-theme-panel" class="corner-theme-panel" role="dialog" aria-label="Color theme selector">
+    <div class="d-flex align-items-center justify-content-between px-2 pb-2 mb-2 border-bottom border-secondary border-opacity-25">
+      <span class="fw-bold text-white small text-uppercase" style="letter-spacing: 0.06em;"><i class="bi bi-palette me-1 text-info"></i> Color Theme</span>
+      <span class="badge bg-dark text-info border border-info border-opacity-25" id="theme-active-name">Cyber Cyan</span>
+    </div>
+    <div class="theme-options-grid">
+      <button type="button" class="theme-option-btn active" data-theme-id="default" title="Cyber Cyan: Modern cyan and emerald cyber aesthetic">
+        <span class="theme-swatch" style="--swatch-1: #57cbcc; --swatch-2: #6cb670; --swatch-bg: #0f1318;"></span>
+        <span class="theme-name">Cyber Cyan</span>
+        <i class="bi bi-check2 theme-check-icon"></i>
+      </button>
+      <button type="button" class="theme-option-btn" data-theme-id="nord" title="Nord Frost: Arctic ice and polar aurora night">
+        <span class="theme-swatch" style="--swatch-1: #88c0d0; --swatch-2: #a3be8c; --swatch-bg: #242933;"></span>
+        <span class="theme-name">Nord Frost</span>
+        <i class="bi bi-check2 theme-check-icon"></i>
+      </button>
+      <button type="button" class="theme-option-btn" data-theme-id="dracula" title="Dracula: Vampire purple and neon electric pink">
+        <span class="theme-swatch" style="--swatch-1: #bd93f9; --swatch-2: #ff79c6; --swatch-bg: #21222c;"></span>
+        <span class="theme-name">Dracula</span>
+        <i class="bi bi-check2 theme-check-icon"></i>
+      </button>
+      <button type="button" class="theme-option-btn" data-theme-id="monokai" title="Monokai Pro: Vibrant warm amber and magenta neon">
+        <span class="theme-swatch" style="--swatch-1: #ffd866; --swatch-2: #ff6188; --swatch-bg: #19181a;"></span>
+        <span class="theme-name">Monokai Pro</span>
+        <i class="bi bi-check2 theme-check-icon"></i>
+      </button>
+      <button type="button" class="theme-option-btn" data-theme-id="gruvbox" title="Gruvbox Retro: Vintage warm amber, orange and retro forest">
+        <span class="theme-swatch" style="--swatch-1: #fabd2f; --swatch-2: #8ec07c; --swatch-bg: #1d2021;"></span>
+        <span class="theme-name">Gruvbox Retro</span>
+        <i class="bi bi-check2 theme-check-icon"></i>
+      </button>
+      <button type="button" class="theme-option-btn" data-theme-id="catppuccin" title="Catppuccin Mocha: Velvet mauve, flamingo and sapphire">
+        <span class="theme-swatch" style="--swatch-1: #cba6f7; --swatch-2: #f5c2e7; --swatch-bg: #11111b;"></span>
+        <span class="theme-name">Catppuccin</span>
+        <i class="bi bi-check2 theme-check-icon"></i>
+      </button>
+      <button type="button" class="theme-option-btn" data-theme-id="solarized" title="Solarized Dark: Deep teal ocean, cyan and solar amber">
+        <span class="theme-swatch" style="--swatch-1: #2aa198; --swatch-2: #cb4b16; --swatch-bg: #00212b;"></span>
+        <span class="theme-name">Solarized</span>
+        <i class="bi bi-check2 theme-check-icon"></i>
+      </button>
+      <button type="button" class="theme-option-btn" data-theme-id="light" title="Classic Light: Clean white background">
+        <span class="theme-swatch" style="--swatch-1: #00739e; --swatch-2: #98070c; --swatch-bg: #ffffff;"></span>
+        <span class="theme-name">Classic Light</span>
+        <i class="bi bi-check2 theme-check-icon"></i>
+      </button>
     </div>
   </div>
 

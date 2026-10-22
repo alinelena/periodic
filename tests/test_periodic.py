@@ -100,6 +100,29 @@ class TestPeriodicTableSite(unittest.TestCase):
         self.assertIn('id="pt-bg-dark"', app_html)
         self.assertIn('autocomplete="off"', app_html)
 
+        # eu-github color theme selector assertions
+        self.assertIn('id="corner-theme-panel"', app_html)
+        self.assertIn('data-theme-id="nord"', app_html)
+        self.assertIn('data-theme-id="dracula"', app_html)
+        self.assertIn('data-theme-id="monokai"', app_html)
+        self.assertIn('data-theme-id="gruvbox"', app_html)
+        self.assertIn('data-theme-id="catppuccin"', app_html)
+        self.assertIn('data-theme-id="solarized"', app_html)
+
+        self.assertIn('[data-theme="nord"]', css)
+        self.assertIn('[data-theme="dracula"]', css)
+        self.assertIn('.corner-theme-btn', css)
+        self.assertIn('.corner-theme-panel', css)
+
+        self.assertIn("function applyTheme", js)
+        self.assertIn("function initThemeSelector", js)
+
+        # Ensure YAML Schema is removed from top menu navbar in _quarto.yml
+        quarto_yml = (ROOT / "_quarto.yml").read_text(encoding="utf-8")
+        y_data = yaml.safe_load(quarto_yml)
+        nav_left_texts = [item.get("text") for item in y_data["website"]["navbar"]["left"]]
+        self.assertNotIn("YAML Schema", nav_left_texts, "YAML Schema must not be in top menu navbar")
+
 
 if __name__ == "__main__":
     unittest.main()

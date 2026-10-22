@@ -443,19 +443,62 @@
       radio.addEventListener("change", (e) => setDensity(e.target.value));
     });
 
-    // Background Theme Toggle (Light vs Dark)
-    function setBgTheme(theme, save = true) {
-      const isDark = (theme === "dark");
-      document.body.classList.toggle("pt-dark-theme", isDark);
-      document.documentElement.setAttribute("data-bs-theme", isDark ? "dark" : "light");
+    // Theme Names & Definitions (matching eu-github)
+    const THEME_NAMES = {
+      default: "Cyber Cyan",
+      cyber: "Cyber Cyan",
+      nord: "Nord Frost",
+      dracula: "Dracula",
+      monokai: "Monokai Pro",
+      gruvbox: "Gruvbox Retro",
+      catppuccin: "Catppuccin",
+      solarized: "Solarized",
+      light: "Classic Light",
+    };
+
+    let lastDarkTheme = "default";
+
+    // Comprehensive Theme Application (eu-github data-theme + Bootstrap data-bs-theme)
+    function applyTheme(themeId, save = true) {
+      if (!THEME_NAMES[themeId]) {
+        themeId = themeId === "light" ? "light" : "default";
+      }
+
+      const isLight = (themeId === "light");
+      if (!isLight) {
+        lastDarkTheme = themeId;
+      }
+
+      document.documentElement.setAttribute("data-theme", themeId);
+      document.documentElement.setAttribute("data-bs-theme", isLight ? "light" : "dark");
+      document.body.classList.toggle("pt-dark-theme", !isLight);
 
       const tLight = document.getElementById("pt-bg-light");
       const tDark = document.getElementById("pt-bg-dark");
-      if (tLight) tLight.checked = !isDark;
-      if (tDark) tDark.checked = isDark;
+      if (tLight) tLight.checked = isLight;
+      if (tDark) tDark.checked = !isLight;
+
+      const activeBadge = document.getElementById("theme-active-name");
+      if (activeBadge) {
+        activeBadge.textContent = THEME_NAMES[themeId] || "Cyber Cyan";
+      }
+
+      const toolbarName = document.getElementById("toolbar-theme-name");
+      if (toolbarName) {
+        toolbarName.textContent = THEME_NAMES[themeId] || "Themes";
+      }
+
+      document.querySelectorAll(".theme-option-btn").forEach((btn) => {
+        const id = btn.getAttribute("data-theme-id");
+        btn.classList.toggle("active", id === themeId);
+      });
 
       if (save) {
-        try { localStorage.setItem("pt-theme", theme); } catch (e) {}
+        try {
+          localStorage.setItem("mlego-theme", themeId);
+          localStorage.setItem("site-theme", themeId);
+          localStorage.setItem("pt-theme", themeId);
+        } catch (e) {}
       }
 
       // Re-apply current color mode to refresh fill/stroke colors for dark/light
@@ -470,9 +513,119 @@
       }
     }
 
+    function setBgTheme(theme, save = true) {
+      if (theme === "light") {
+        applyTheme("light", save);
+      } else {
+        applyTheme(lastDarkTheme || "default", save);
+      }
+    }
+
     document.querySelectorAll('input[name="pt-bg-theme"]').forEach((radio) => {
       radio.addEventListener("change", (e) => setBgTheme(e.target.value));
     });
+
+    // Mount Theme Selector in Top Menu & Wire Panel (as in eu-github)
+    function initThemeSelector() {
+      const themePanel = document.getElementById("corner-theme-panel");
+      const navMsAuto = document.querySelector("#quarto-header .navbar-nav.ms-auto");
+      const navTools = document.querySelector("#quarto-header .quarto-navbar-tools");
+
+      // Inject theme button into top navbar (desktop)
+      if (navMsAuto && !document.getElementById("corner-theme-nav-item")) {
+        const navItem = document.createElement("li");
+        navItem.id = "corner-theme-nav-item";
+        navItem.className = "nav-item position-relative d-flex align-items-center me-2";
+        navItem.innerHTML = `
+          <button type="button" id="corner-theme-toggle" class="corner-theme-btn" aria-expanded="false" aria-controls="corner-theme-panel" aria-label="Choose color theme" title="Choose color theme">
+            <i class="bi bi-palette-fill"></i>
+          </button>
+        `;
+        navMsAuto.insertBefore(navItem, navMsAuto.firstChild);
+      }
+
+      // Inject theme button into mobile navbar tools
+      if (navTools && !document.getElementById("corner-theme-tools-btn")) {
+        const toolsBtn = document.createElement("button");
+        toolsBtn.type = "button";
+        toolsBtn.id = "corner-theme-tools-btn";
+        toolsBtn.className = "corner-theme-btn me-2 d-lg-none";
+        toolsBtn.setAttribute("aria-expanded", "false");
+        toolsBtn.setAttribute("aria-label", "Choose color theme");
+        toolsBtn.setAttribute("title", "Choose color theme");
+        toolsBtn.innerHTML = `<i class="bi bi-palette-fill"></i>`;
+        navTools.appendChild(toolsBtn);
+      }
+
+      const desktopBtn = document.getElementById("corner-theme-toggle");
+      const mobileBtn = document.getElementById("corner-theme-tools-btn");
+      const toolbarBtn = document.getElementById("toolbar-theme-toggle");
+
+      if (themePanel && desktopBtn && desktopBtn.parentElement) {
+        desktopBtn.parentElement.appendChild(themePanel);
+      }
+
+      function closeThemePanel() {
+        if (!themePanel) return;
+        themePanel.classList.remove("show");
+        if (desktopBtn) desktopBtn.setAttribute("aria-expanded", "false");
+        if (mobileBtn) mobileBtn.setAttribute("aria-expanded", "false");
+        if (toolbarBtn) toolbarBtn.setAttribute("aria-expanded", "false");
+      }
+
+      function toggleThemePanel(triggerBtn) {
+        if (!themePanel) return;
+        const isOpen = themePanel.classList.contains("show");
+        if (isOpen) {
+          closeThemePanel();
+        } else {
+          // Re-parent panel to whichever button triggered it if needed
+          if (triggerBtn && triggerBtn.parentElement) {
+            triggerBtn.parentElement.appendChild(themePanel);
+          }
+          themePanel.classList.add("show");
+          triggerBtn?.setAttribute("aria-expanded", "true");
+        }
+      }
+
+      [desktopBtn, mobileBtn, toolbarBtn].forEach((btn) => {
+        if (!btn) return;
+        btn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          toggleThemePanel(btn);
+        });
+      });
+
+      document.addEventListener("click", (e) => {
+        if (
+          themePanel &&
+          !themePanel.contains(e.target) &&
+          (!desktopBtn || !desktopBtn.contains(e.target)) &&
+          (!mobileBtn || !mobileBtn.contains(e.target)) &&
+          (!toolbarBtn || !toolbarBtn.contains(e.target))
+        ) {
+          closeThemePanel();
+        }
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          closeThemePanel();
+        }
+      });
+
+      // Bind theme buttons inside panel
+      document.querySelectorAll(".theme-option-btn").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          const themeId = btn.getAttribute("data-theme-id");
+          if (themeId) {
+            applyTheme(themeId);
+            closeThemePanel();
+          }
+        });
+      });
+    }
 
     // Width Mode Toggle (Fit Screen vs Scrollable)
     function setWidthMode(mode, save = true) {
@@ -902,17 +1055,24 @@
       trendSelect.addEventListener("change", (e) => renderTrendChart(e.target.value));
     }
 
+    // Initialize theme selector in top menu navbar and toolbar
+    initThemeSelector();
+
     // Restore saved settings or apply initial defaults
-    let initialTheme = "light";
+    let initialTheme = "default";
     let initialWidth = "fit";
     let initialDensity = "detailed";
     try {
-      initialTheme = localStorage.getItem("pt-theme") || (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      initialTheme =
+        localStorage.getItem("mlego-theme") ||
+        localStorage.getItem("site-theme") ||
+        localStorage.getItem("pt-theme") ||
+        "default";
       initialWidth = localStorage.getItem("pt-width-mode") || "fit";
       initialDensity = localStorage.getItem("pt-density") || "detailed";
     } catch (e) {}
 
-    setBgTheme(initialTheme, false);
+    applyTheme(initialTheme, false);
     setWidthMode(initialWidth, false);
     setDensity(initialDensity, false);
     applyColorMode(colorModeSelect ? colorModeSelect.value : "category");
